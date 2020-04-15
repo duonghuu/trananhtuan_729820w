@@ -1,0 +1,48 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+%idx-tit {} 
+%idx-tit-line {
+    content: "";
+    background: url($images-url + "idx-l.png");
+    @include box(134px, 7px);
+    @include relative($bottom: -5px);
+}
+.idx-tit {
+    margin-bottom: 37px;
+    position: relative;
+    &>a{
+      @include absolute($right: 0, $top: 5px);
+    }
+    h4 {
+        @include setFont(em(33), #333, 700);
+        @include bg("idx-tit.png",$background-position: bottom center);
+        padding-bottom: 25px;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0;
+        img{
+        }
+        span, a {
+            color: #333;
+            display: inline-block;
+            position: relative;
+            &::after {
+                // content: "";
+                // @include bg("idx-tit.png");
+                // @include box(155px, 33px);
+                // @include absolute($bottom: -20px, $right: -90px);
+            }
+        }
+
+        &::before {
+        }
+
+        &::after {
+        }
+    }
+}
+
+.idx-desc {
+    // @include setFont(15px, #808080, 400, $font-text);
+}

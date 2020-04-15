@@ -1,0 +1,23 @@
+@media screen 
+	and (min-width: $device_size_small)
+	and (max-width: $device_size_medium) 
+{
+  @include setHeaderCenter;
+  @include showMobileMenu;
+  /*========= HOME ===============*/
+  @include setSpnoibatSmall;
+  @include setThemanhSmall;
+  @include setCheckout_lg;
+  // @include setSliderSmall;
+  // @include setDoitacSmall;
+  // @include setLeftRightMobile;
+  // @include setCartMobile;
+  // @include setTaiSaoFull;
+  // @include setTinVideoFull;
+  /*========= FOOTER ===============*/
+  @include setFooterSmall;
+  @include setCopyrightCenter;
+  // @include setProductMobile;
+  
+  
+}

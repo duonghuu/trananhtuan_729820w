@@ -1,0 +1,23 @@
+@media screen 
+	and (max-width: $device_size_mobile) {
+        /*========= COMMON ===============*/
+        @include setIdxTitleSize;
+        /*========= HEADER ===============*/
+        @include setHeaderCenter;
+        @include showMobileMenu;
+        /*========= HOME ===============*/
+        @include setSpnoibatSmall;
+        @include setThemanhSmall;
+        // @include setSliderSmall;
+        // @include setDoitacSmall;
+
+        // @include setLeftRightMobile;
+        // @include setCartMobile;
+        /*========= PRODUCT ===============*/
+        @include setProductColumnMobile(6, 8px); 
+        @include setProductMobile;
+        // @include setTaiSaoFull;
+        /*========= FOOTER ===============*/
+        @include setFooterSmall;
+        @include setCopyrightCenter;
+}
