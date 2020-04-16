@@ -9,22 +9,19 @@
     @include relative($bottom: -5px);
 }
 .idx-tit {
-    margin-bottom: 37px;
+    margin-bottom: 0;
     position: relative;
     &>a{
-      @include absolute($right: 0, $top: 5px);
     }
     h4 {
-        @include setFont(em(33), #333, 700);
-        @include bg("idx-tit.png",$background-position: bottom center);
-        padding-bottom: 25px;
+        @include setFont(em(36), $theme-color, 700, $font-JosefinSans);
         text-transform: uppercase;
         text-align: center;
         margin: 0;
         img{
         }
         span, a {
-            color: #333;
+            color: $theme-color;
             display: inline-block;
             position: relative;
             &::after {
@@ -45,4 +42,156 @@
 
 .idx-desc {
     // @include setFont(15px, #808080, 400, $font-text);
+}
+.thuvien-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "gri1 gri1 gri2 gri3" "gri1 gri1 gri4 gri5";
+}
+
+.gri1 { grid-area: gri1; }
+
+.gri2 { grid-area: gri2; }
+
+.gri3 { grid-area: gri3; }
+
+.gri4 { grid-area: gri4; }
+
+.gri5 { grid-area: gri5; }
+
+.gioithieu{
+    @include bg("about.jpg", $background-size: cover);
+    padding: em(40) 0;
+    text-align: center;
+  &__title{
+   
+    p{
+        @include setFont(33px, #000, 400, $font-UTMYenTu);
+        line-height: 1;
+    }
+    h2{
+        @include setFont(em(40), $theme-color, 700, $font-JosefinSans);
+        text-transform: uppercase;
+        line-height: 1;
+      a{
+        color: $theme-color;
+
+      }
+    }
+  }
+  &__text{
+    max-width: 870px;
+    margin: 0 auto;
+    @include setFont(16px, #333, 400);
+    line-height: 1.5;
+  }
+}
+
+.visao{
+    @include grid($display: flex, $justify-content: space-between);
+  &>figure{
+    @include grid($display: inline-flex);
+    @include flex(1);
+    margin-bottom: 0;
+    img{
+        width: 100%;
+    }
+  }
+  .visao-box{
+    width: 50%;
+    padding: em(40) em(40) 0;
+    @include bg("visao-bg.jpg",$background-size: cover);
+    .idx-tit{
+        h4{
+            span{
+                color: #fff;
+            }
+        }
+    }
+    .title-desc{
+        @include setFont(14px, #fff, 400);
+        line-height: 1.5;
+        text-align: center;
+        max-width: 514px;
+        margin: 0 auto 30px;
+    }
+    ul{
+        @extend %reset-list;
+      li{
+        @include grid(flex,$justify-content: space-between, $align-items: center);
+        position: relative;
+        min-height: 82px;
+        figure{
+            @include box(71px, 82px);
+            @include absolute($left: -75px);
+            @include bg("visao.png", $background-size: cover);
+            @include grid(inline-flex,$justify-content: center, $align-items: center);
+            margin-bottom: 0;
+          img{
+            max-width: 80%;
+          }
+        }
+        h4{
+            @include setFont(20px, #fff, 300);
+            @include flex(1);
+            text-transform: uppercase;
+            margin-left: 20px;
+        }
+        @include doubly(){
+            margin-top: 20px;
+        };
+      }
+    }
+  }
+}
+.spnoibat{
+    padding: em(40) 0;
+  .nav{
+    @include justify-content(center);
+    margin: 10px 0 20px;
+    .nav-link{
+        @include setFont(18px, #333);
+        @include transition(all 0.2s ease);
+        text-transform: uppercase;
+        border-radius: 0;
+        border: 2px solid transparent;
+
+      &.active{
+        background-color: transparent;
+        border-color: $theme-color;
+      }
+    }
+  }
+}
+.nhuongquyen{
+    padding: em(40) 0;
+  .subtitle{}
+  &-main{
+    margin: 0 -#{em(14)};
+    .nhuongquyen-item{
+        padding: 0 em(14);
+      a{
+        display: block;
+        figure{
+          img{
+
+          }
+        }
+        .info{
+          strong{}
+          span{}
+          h5{}
+          p{}
+        }
+      }
+    }
+  }
+}
+.quangcao{
+  .quangcao-item{
+    a{
+      img{}
+    }
+  }
 }

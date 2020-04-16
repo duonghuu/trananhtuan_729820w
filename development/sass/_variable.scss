@@ -4,15 +4,17 @@
 
 /// Container's maximum width
 /// @type Length
-$max-width: 1330px !default;
+$max-width: 1220px !default;
 $browser-context: 16;
 /* ======================== FONTS ======================== */
 $font-SFUSchadowBTBlackCondensed        : 'SFUSchadowBTBlackCondensed';
 $font-UTMHelvetIns                      : 'UTMHelvetIns';
+$font-UTMYenTu                          : 'UTMYenTu';
 $font-UTMImpact                         : 'UTMImpact';
 $font-SFUFuturaBook                     : 'SFUFuturaBook';
 $font-SFUFuturaHeavy                    : 'SFUFuturaHeavy';
 $font-SFUBelleRegular                    : 'SFUBelleRegular';
+$font-JosefinSans                       : 'Josefin Sans', sans-serif;
 $font-roboto-mono                       : 'Roboto Mono', monospace;
 $font-open-sans                         : 'Open Sans', sans-serif;
 $font-roboto-condensed                  : 'Roboto Condensed', sans-serif;

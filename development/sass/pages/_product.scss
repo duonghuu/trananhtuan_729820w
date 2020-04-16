@@ -13,7 +13,6 @@
 }
 $product-gutter: percentage(30/1330);
 .product-grid{
-    // @include clearfix; 
     @include grid($display: flex, $flex-wrap: wrap, $gutter: $product-gutter);
 
 }
@@ -26,7 +25,7 @@ $product-gutter: percentage(30/1330);
     position:relative;
     @include transition(all .2s linear);
 
-    @at-root .slick-box-item #{&}{
+    @include when-inside('.slick-box-item'){
         // float: none;
         margin: 0;
         width: 100%;
@@ -40,41 +39,20 @@ $product-gutter: percentage(30/1330);
             display: block;
             overflow: hidden;
             position: relative;
-            padding-top: percentage(403/303);
+            padding-top: 100%;
             margin-bottom: 10px;
+            border: 1px solid #eee8e6;
             img{
-                @extend %img-fill;
+                @extend %img-fill; 
+                object-fit: cover;
+                object-position: top center;
             }
             .giam{
-                @include absolute($top: 10px, $left: 10px);
-                @include box(40px, 40px, 100%);
-                @include setFont(12px, #fff);
-                @include boxstyle($display: inline-flex, $justify-content: center, $align-items: center);
-                background-color: #fc0214;
-            }
-            .sizepanel{
-                height: 51px;
-                @include boxstyle($display: flex, $justify-content: space-between, $align-items: center);
-                background-color: rgba(#fff, 0.9);
-                @include absolute($bottom: -51px, $left: 0px, $right: 0);
-                @include transition(all 0.2s ease);
-                padding: 0 20px;
-                &>span{
-                    @extend %size-style;
-                }
-                .size-right{
-                    span{
-                        @extend %size-style;
-                        @include doubly(){
-                            margin-left: 5px;
-                        }
-                    }
-                }
-            }
-            &:hover{
-                .sizepanel{
-                    bottom: 0;
-                }
+                // @include absolute($top: 10px, $left: 10px);
+                // @include box(40px, 40px, 100%);
+                // @include setFont(12px, #fff);
+                // @include boxstyle($display: inline-flex, $justify-content: center, $align-items: center);
+                // background-color: #fc0214;
             }
         }
 
@@ -82,9 +60,10 @@ $product-gutter: percentage(30/1330);
             z-index:6;
             position:relative;
             h3{
-                @include setFont(16px, #333, 400);
-                @include setTagAHover(#333, #d8232a);
+                @include setFont(14px, #333, 500);
+                @include setTagAHover(#333, $theme-color);
                 margin-bottom: 7px;
+                text-align: center;
                 a{
                     @include transition(all .2s ease);
                     line-height: 1.4;
@@ -93,11 +72,12 @@ $product-gutter: percentage(30/1330);
 
             p{
                 @include boxstyle($display: flex, $flex-wrap: wrap, $align-items: flex-end, $justify-content: 
-                    space-between);
-                @include setFont(13px, #9a9a9a);
+                    center);
+                @include setFont(14px, #333);
                 margin: 0;
                 line-height: 1;
                 del{
+                    margin-left: 3px;
                 }
 
                 strong{
@@ -108,6 +88,7 @@ $product-gutter: percentage(30/1330);
 
                 span{
                     @include setFont(17px, #d8232a, 700);
+                    margin-left: 3px;
                 }
             }
         }

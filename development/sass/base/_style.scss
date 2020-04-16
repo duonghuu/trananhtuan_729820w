@@ -174,10 +174,15 @@ a {
 }
 
 img {
-    max-width: 100% !important;
+    max-width: 100%;
     height: auto;
 }
-
+.content{
+  img {
+    max-width: 100% !important;
+    height: auto;
+    }  
+}
 div.bando img {
     max-width: none !important;
 }

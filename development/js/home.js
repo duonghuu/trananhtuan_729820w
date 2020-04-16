@@ -1,4 +1,4 @@
-$('.spnoibat-main').on({
+$('.nhuongquyen-main').on({
       beforeChange: function(event, slick, currentSlide, nextSlide) {
           myLazyLoad.update();
       }
@@ -6,9 +6,9 @@ $('.spnoibat-main').on({
       lazyLoad: 'ondemand',
       infinite: true,
       accessibility: false,
-      slidesToShow: 4,
+      slidesToShow: 3,
       slidesToScroll: 1,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 3000,
       speed: 1000,
       arrows: true,
@@ -42,7 +42,7 @@ $('.spnoibat-main').on({
         accessibility: false,
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 3000,
         speed: 1000,
         arrows: true,
@@ -71,7 +71,7 @@ $('.spnoibat-main').on({
           accessibility: false,
           slidesToShow: 4,
           slidesToScroll: 1,
-          autoplay: true,
+          autoplay: false,
           autoplaySpeed: 3000,
           speed: 1000,
           arrows: true,

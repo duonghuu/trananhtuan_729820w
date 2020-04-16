@@ -453,7 +453,8 @@ switch($type){
 	case 'gioi-thieu':
 	switch($act){
 		default:
-		$config['type'] = array('seo','noidung','ten','mota');
+		$config['type'] = array('seo','noidung','ten','mota','ten2');
+		$config['title'] = array('ten2'=>'Tiêu để nhỏ');
 		@define ( _width_thumb , 585 );
 		@define ( _height_thumb , 400 );
 		@define ( _style_thumb , 2 );

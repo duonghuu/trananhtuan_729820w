@@ -12,7 +12,7 @@
     @include box(100%, 16px);
     @include absolute($left: 0);
 }
-.hd-hotline {
+%hd-hotline-style {
     @include boxstyle($display: inline-flex, $flex-direction: column);
     float: right;
     position: relative;
@@ -44,103 +44,47 @@
 .hd-bg {
     width: 100%;
     z-index: 450;
-    @include relative($left: 0);
+    @include absolute($left: 0);
 }
 .hd-top{
-    background-color: $theme-color;
-    .hd-top-flex{
-        @include boxstyle($display: flex, $justify-content: space-between, $align-items: center);
-        min-height: 30px;
-        marquee{
-            @include setFont(13px, #fff);
-            @include flex(1);
-        }
-        ul{
-            @extend %reset-list;
-            @include flex(1);
-            @include boxstyle($display: flex, $justify-content: flex-end, $align-items: center);
-            li{
-                position: relative;
-                @include boxstyle($display: inline-flex, $align-items: center);
-                @include doubly(){
-                    margin-left: 22px;
-                    &:before{
-                        content: "";
-                        background-color: #fff;
-                        @include box(1px, 9px);
-                        @include absolute($left: -11px);
-                    }
-                }
-                @include setTagAHover(#fff, #ff0);
-                a{
-                    @include setFont(12px, #fff, 300);
-                }
-            }
-        }
-    }
-}
-.hd-top-left{
-    @include flex(1);
-    @include boxstyle($display: inline-flex, $align-items: center);
-    .hd-name{
-        @include setFont(18px, #fff, 400, $font-SFUBelleRegular );
-        @include boxstyle($display: inline-flex, $align-items: center); 
-        line-height: 1;
-    }
+    border-bottom: 1px solid #322e2c;
+  &-flex{
+    @include boxstyle($display: flex, $justify-content: space-between, $align-items: center);
     p{
-        @include setFont(14px, #fff);
-        @include setTagAHover(#fff, #f00);
-        @include boxstyle($display: inline-flex, $align-items: center);
-        margin: 0 0 0 34px;
-        position: relative;
-        &:before{
-            content: "";
-            background-color: #fff;
-            @include box(1px, 16px);
-            @include absolute($left: -17px);
-        }
-        i{
-            margin-right: 5px;
-            font-size: 12px;
-        }
-
-        a{
-            font-weight: 700;
-        }
-    }
+        @include setFont(15px, #fff, 700, $font-JosefinSans);
+        margin-bottom: 0;
+        line-height: 1;
+      i{
+        margin-right: 5px;
+      }
+      a{
+        color: #fff;
+      }
+      @include doubly(){
+        @include setFont(13px, #fff, 500, $font-roboto);
+      };
+  }
+}
 }
 .hd-bot{
-    @include relative($left: 0, $right: 0);
-    background-color: #fff;
-    &.fixed{
-        @include boxShadow(0 3px 3px rgba(51,51,51,0.2));
+    padding: 5px 0;
+  &-flex{
+    @include boxstyle($display: flex, $justify-content: space-between, $align-items: center);
+    .hd-name{
+        @include setFont(em(30), #fff, 700, $font-JosefinSans);
+        text-transform: uppercase;
+        margin: 0 em(15);
     }
-    &>.container{
-        z-index: 500;
-    }
-    .hd-bot-flex{
-        @include boxstyle($display: flex, $justify-content: space-between, $align-items: center);
-        position: relative;
-        &:before{
-            content: "";
-            @include flex(1);
-        }
-    }
+}
+}
+.mxh{
+    @extend %mxh-style;
 }
 .logo{
-    @include flex(1);
-    display: block;
-    text-align: center;
     img{
-        height: 82px;
+        height: 110px;
         @include transition(all 0.4s ease);
-        @at-root .fixed #{&}{
-            height: 50px;
+        @include when-inside('.fixed'){
         }
     }
-}
-.hd-mid{
-    position: relative;
-    @include flex(1);
-    @include boxstyle($display: inline-flex, $justify-content: flex-end, $align-items: center);
 }

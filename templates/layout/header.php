@@ -1,9 +1,10 @@
 <header class="hd-bg">
+  
   <div class="hd-top">
     <div class="container">
       <div class="hd-top-flex">
         <p><?= $company["slogan"] ?></p>
-        <p><i class="fas fa-marker-alt"></i><?= $company["diachi"] ?></p>
+        <p><i class="fas fa-map-marker-alt"></i><?= $company["diachi"] ?></p>
         <p><i class="fas fa-phone-alt"></i><a href="tel:<?=preg_replace('/[^0-9]/','',$company['dienthoai']);?>">
           <?= $company['dienthoai'] ?></a></p>
           <div class="mxh"><?= lay_mxh("mxh") ?></div>

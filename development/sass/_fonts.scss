@@ -167,3 +167,12 @@
        url($font-url+'barlow-semi-condensed-v5-vietnamese_latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
        url($font-url+'barlow-semi-condensed-v5-vietnamese_latin-italic.svg#BarlowSemiCondensed') format('svg'); /* Legacy iOS */
 }
+@font-face {
+    font-family: 'UTMYenTu';font-display: swap;
+    src: url($font-url+'UTMYenTu.eot');
+    src: url($font-url+'UTMYenTu.eot') format('embedded-opentype'),
+         url($font-url+'UTMYenTu.woff2') format('woff2'),
+         url($font-url+'UTMYenTu.woff') format('woff'),
+         url($font-url+'UTMYenTu.ttf') format('truetype'),
+         url($font-url+'UTMYenTu.svg#UTMYenTu') format('svg');
+}

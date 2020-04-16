@@ -86,4 +86,6 @@
           });
       </script>
       <?php } ?>
-      <script src="js/search_nangcao.js" type="text/javascript" ></script>
+      <?php /* 
+      <script src="js/search_nangcao.js" type="text/javascript" ></script> 
+      */?>

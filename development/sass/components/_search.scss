@@ -2,11 +2,11 @@
     border: none;
     cursor: pointer;
     z-index: 400;
-    position: relative;
     outline: none !important;
     background-color: transparent;
     @include transition(width .6s, border-radius .6s, background .6s, box-shadow .6s);
-    @include setFont(17px, #000, 700);
+    @include absolute($right: -60px);
+    @include setFont(17px, #fff, 700);
     @include box(36px, 32px);
     @include grid($display: inline-flex, $align-items: center, $justify-content: center);
     &::before{
@@ -27,7 +27,7 @@
     z-index: 50;
     display: none;
     margin: 0 auto;
-    @include absolute($right: 120px);
+    @include absolute($right: 0);
     &.hien {
         display: block;
     }
