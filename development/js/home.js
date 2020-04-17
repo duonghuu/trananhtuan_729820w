@@ -18,12 +18,12 @@ $('.nhuongquyen-main').on({
       responsive: [{
           breakpoint: 830,
           settings: {
-              slidesToShow: 3
+              slidesToShow: 2
           }
       },{
           breakpoint: 500,
           settings: {
-              slidesToShow: 2
+              slidesToShow: 1
           }
       },{
           breakpoint: 330,
@@ -48,6 +48,7 @@ $('.nhuongquyen-main').on({
         arrows: true,
         centerMode: false,
         dots: false,
+        vertical: true,
         draggable: true,
         responsive: [{
             breakpoint: 830,
@@ -57,7 +58,7 @@ $('.nhuongquyen-main').on({
         },{
             breakpoint: 500,
             settings: {
-                slidesToShow: 1
+                slidesToShow: 2
             }
         }]
     });
@@ -96,18 +97,3 @@ $('.nhuongquyen-main').on({
           }
           ]
       });
-  
-  $('.sliderma-main').slick({lazyLoad: 'ondemand',
-    infinite: true,
-    accessibility:false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay:true,
-    autoplaySpeed:3000,
-    speed:1000,
-    arrows:false,
-    fade:true,
-    centerMode:false,
-    dots:false,
-    draggable:true,
-  });

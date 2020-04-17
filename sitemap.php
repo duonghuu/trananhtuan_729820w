@@ -1,14 +1,12 @@
 <?php
 		session_start();
 		$session=session_id();
-		@define ( '_lib' , './admin/lib/');
+		@define ( '_lib' , './libraries/');
 
 		include_once _lib."config.php";
 		include_once _lib."functions.php";
 		include_once _lib."functions_for.php";
-		if (version_compare(phpversion(), '7.0.0', '<')) include_once _lib."class.database.php";
-		else include_once _lib."class.database7.3.php"; 
-
+		include_once _lib."class.database.php";
 		include_once _lib."file_requick.php";
 		$time_sitemap = time();
 		function get_http(){
@@ -39,11 +37,29 @@
 			$d->query($sql);
 			$result_data = $d->result_array();
 			foreach ($result_data as $key => $v) { 
-				
-				if($link_id){
-					urlElement('/'.$v["type"].'/'.$v["tenkhongdau"].'-'.$v["id"].'.html',$priority,$v['ngaytao']);
-				}else{
+				if( !$link_id ){
 					urlElement('/'.$v['tenkhongdau'],$priority,$v['ngaytao']);
+					continue;
+				}
+				// if($link_id){
+				// 	urlElement('/'.$v["type"].'/'.$v["tenkhongdau"].'-'.$v["id"].'.html',$priority,$v['ngaytao']);
+				// }else{
+				// 	urlElement('/'.$v['tenkhongdau'],$priority,$v['ngaytao']);
+				// }
+				if($tbl=='product'){
+					if(!empty($v["tenkhongdau"])){
+						urlElement('/'.$v["type"].'/'.$v["tenkhongdau"].'-'.$v["id"].'.html',$priority,$v['ngaytao']);
+					}
+				}else if($tbl=='product_danhmuc'){
+					if(!empty($v["tenkhongdau"])){
+						urlElement('/'.$v["type"].'/'.$v["tenkhongdau"].'-'.$v["id"],$priority,$v['ngaytao']);
+					}
+				}else if($tbl=='product_list'){
+					urlElement('/'.$v["type"].'/'.$v["tenkhongdau"].'-'.$v["id"].'/',$priority,$v['ngaytao']);
+				}else if($tbl=='product_cat'){
+					urlElement('/'.$v["type"].'/'.$v["tenkhongdau"].'/'.$v["id"],$priority,$v['ngaytao']);
+				}else if($tbl=='product_item'){
+					urlElement('/'.$v["type"].'/'.$v["tenkhongdau"].'/'.$v["id"].'/',$priority,$v['ngaytao']);
 				}
 			}	
 		}

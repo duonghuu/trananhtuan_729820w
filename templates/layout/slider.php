@@ -1,5 +1,5 @@
       <?php 
-      if($source == "index"){
+      if($source != "index1"){
         $slider = get_result("select ten$lang as ten,photo,thumb from #_slider 
           where hienthi=1 and type='slider' order by stt");
          ?>
@@ -12,8 +12,8 @@
                <section>
                 <a href="<?= $v["link"] ?>" class="slider-link"><picture>
                   <source media="(min-width: 1024px)" srcset="<?= _upload_hinhanh_l.$v["thumb"] ?>" />
-                    <source media="(min-width: 550px)" srcset="thumb/768x270/1/<?= _upload_hinhanh_l.$v["photo"] ?>" />
-                      <img src="thumb/425x150/1/<?= _upload_hinhanh_l.$v["photo"] ?>" 
+                    <source media="(min-width: 550px)" srcset="thumb/768x382/1/<?= _upload_hinhanh_l.$v["thumb"] ?>" />
+                      <img src="thumb/425x212/1/<?= _upload_hinhanh_l.$v["thumb"] ?>" 
                       alt="<?= $v["ten"] ?>" />
                     </picture></a>
                   </section>

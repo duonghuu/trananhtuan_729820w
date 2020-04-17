@@ -9,7 +9,7 @@ if($source=="index"){
     $txtthuvien=get_fetch("select ten$lang as ten,mota$lang as mota from #_about 
         where type='txtthu-vien' ");
     $thuvien=get_result("select ten$lang as ten,tenkhongdau,id,thumb,photo
-        ,type from #_news where type='thu-vien' and noibat>0 and hienthi>0 order by stt asc");
+        ,type from #_news where type='thu-vien' and noibat>0 and hienthi>0 order by stt asc limit 0,5");
     $txtnhuongquyen=get_fetch("select ten$lang as ten,ten2$lang as ten2,mota$lang as mota,thumb,photo from #_about 
         where type='txtnhuong-quyen' ");
     $nhuongquyen=get_result("select ten$lang as ten,ten2$lang as ten2,mota$lang as mota,tenkhongdau,id,thumb,photo

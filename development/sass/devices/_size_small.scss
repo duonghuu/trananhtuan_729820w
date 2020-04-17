@@ -4,16 +4,23 @@
 {
   @include setHeaderCenter;
   @include showMobileMenu;
+  @include setIdxTitleSize;
+
   /*========= HOME ===============*/
-  @include setSpnoibatSmall;
-  @include setThemanhSmall;
-  @include setCheckout_lg;
+  @include setGioiThieu_SM;
+  @include setViSao_SM;
+  $product-gutter: percentage(30/1330);
+  @include setProductColumnMobile($p_col: 6, $p_gutter: $product-gutter);
+  @include setTinVideoFull;
+  // @include setSpnoibatSmall;
+  // @include setThemanhSmall;
+  // @include setCheckout_lg;
   // @include setSliderSmall;
   // @include setDoitacSmall;
   // @include setLeftRightMobile;
   // @include setCartMobile;
   // @include setTaiSaoFull;
-  // @include setTinVideoFull;
+  
   /*========= FOOTER ===============*/
   @include setFooterSmall;
   @include setCopyrightCenter;

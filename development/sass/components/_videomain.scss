@@ -1,11 +1,11 @@
 #video-idx, #iframe{
   width: 100%;
-  height: 310px;
+  height: 400px;
 }
 #video-idx{
   margin-bottom: 10px;
 }
-.video-khac-main{
+%video-khac-main-style{
   margin: 0 -5px;
   .video-khac{
     padding: 0 5px;
@@ -29,4 +29,4 @@
       }
     }
   }
-}
+} 

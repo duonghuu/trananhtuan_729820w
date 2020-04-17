@@ -1,4 +1,6 @@
-<div class="tieude_giua"><div><?=$title_cat?></div></div>
+<?php /* 
+<div class="tieude_giua"><div><?=$title_cat?></div></div> 
+*/?>
 <div class="box_container">
    <div class="content contact-flex">
    		<div class="tt_lh">

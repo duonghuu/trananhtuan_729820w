@@ -4,9 +4,9 @@
 <li class="<?php if($com=='san-pham') echo 'active'; ?>"><a href="san-pham.html"><?= _sanpham ?></a>
   <?= for2cap('product_danhmuc','product_list','san-pham','san-pham','','/')?>
 </li>
-<li class="<?php if($com == 'tin-tuc') echo 'active'; ?>"><a href="tin-tuc.html">Bảng giá</a></li>
-<li class="<?php if($com == 'tin-tuc') echo 'active'; ?>"><a href="tin-tuc.html">Nhượng quyền</a></li>
-<li class="<?php if($com == 'tin-tuc') echo 'active'; ?>"><a href="tin-tuc.html">Chuỗi quán</a></li>
+<li class="<?php if($com == 'bang-gia') echo 'active'; ?>"><a href="bang-gia.html">Bảng giá</a></li>
+<li class="<?php if($com == 'nhuong-quyen') echo 'active'; ?>"><a href="nhuong-quyen.html">Nhượng quyền</a></li>
+<li class="<?php if($com == 'chuoi-quan') echo 'active'; ?>"><a href="chuoi-quan.html">Chuỗi quán</a></li>
 <li class="<?php if($com == 'tin-tuc') echo 'active'; ?>"><a href="tin-tuc.html"><?= _tintuc ?></a></li>
 <li class="<?php if($com == 'tuyen-dung') echo 'active'; ?>"><a href="tuyen-dung.html"><?= _tuyendung ?></a></li>
 <li class="<?php if($source == 'contact') echo 'active'; ?>"><a href="lien-he.html"><?= _lienhe ?></a></li>

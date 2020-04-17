@@ -7,7 +7,7 @@
     height: $height-map;
 }
 %copyright-font {
-    @include setFont(12px, #fff, 400, $font-text);
+    @include setFont(13px, #fff, 400, $font-text);
 }
 
 
@@ -31,50 +31,49 @@
         }
         .ft-info {
             position: relative;
-            width: percentage(600/1300);
+            width: percentage(410/1190);
         }
 
         .ft-bando {
         }
 
         .ft-fanpage {
-            width: percentage(270/1190);
-            .fanpageplace {
-                height: 200px;
-                overflow: hidden;
-            }
+            // width: percentage(270/1190);
+            // .fanpageplace {
+            //     height: 200px;
+            //     overflow: hidden;
+            // }
         }
 
         .ft-dknt{
         }
 
-        .ft-baiviet {
-            width: percentage(350/1300);
+        .ft-social{
+            width: percentage(250/1190);
+        }
+        .ft-video{
+            width: percentage(285/1190);
+        }
 
-            @include doubly(){
-               width: percentage(242/1300); 
-            }
+        .ft-baiviet {
+            width: percentage(210/1190);
             ul {
                 @extend %reset-list;
-
                 li {
                     margin-bottom: 10px;
                     @include setTagAHover(#fff, #ff0);
                     a {
-                        font-size: 15px;
+                        font-size: 13px;
                         position: relative;
-                        
                         @include boxstyle($display: flex, $align-items: flex-start);
                         &::before {
                             // content: "\f009";
-                            content: "";
-                            margin: 8px 7px 0 0;
-                            // @include setFont(7px, #fff, 700, $font-awesome);
-                            @include box(3px, 3px, 100%);
-                            background-color: #fff;
+                            // content: "";
+                            // margin: 8px 7px 0 0;
+                            // // @include setFont(7px, #fff, 700, $font-awesome);
+                            // @include box(3px, 3px, 100%);
+                            // background-color: #fff;
                         }
-                    }
-                    &+li{
                     }
                 }
             }
@@ -82,22 +81,21 @@
     }
 
     .ft-company {
-        @include setFont(em(52), #fc0214, 400, $font-SFUBelleRegular );
-        line-height: 1;
-        a {
-            color: #fc0214;
-        }
+        // @include setFont(em(52), #fc0214, 400, $font-SFUBelleRegular );
+        // line-height: 1;
+        // a {
+        //     color: #fc0214;
+        // }
     }
 
     .ft-tit {
         position: relative;
         margin-bottom: 30px;
-
         strong, span {
-            @include setFont(15px, #fff, 700);
+            @include setFont(14px, #fff, 700);
             &::after {
                 content: "";
-                @include box(50px, 2px);
+                @include box(40px, 3px);
                 @include absolute($bottom: -10px, $left: 0);
                 background-color: #fff;
             }
@@ -127,6 +125,7 @@
     .copyright {
         position: relative;
         background: $bg-copyright; 
+        border-top: 1px solid rgba(255, 255, 255, 0.21);
         .ft-wrap {
             min-height: 54px;
             @include boxstyle($display: flex, $justify-content: space-between, $align-items: center);
@@ -169,5 +168,13 @@
 .codebando, .codebando iframe{
     // @extend %map-style;
 }
+.ft-logo{
+    display: block;
+    text-align: center;
+    img{
 
-/*end footer*/
+    }
+}
+.mxhft{
+    @extend %mxhft-style;
+}

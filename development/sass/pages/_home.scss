@@ -41,24 +41,67 @@
 }
 
 .idx-desc {
-    // @include setFont(15px, #808080, 400, $font-text);
+    @include setFont(15px, #333, 400);
+    text-align: center;
+    max-width: 810px;
+    margin: 7px auto 20px;
 }
-.thuvien-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "gri1 gri1 gri2 gri3" "gri1 gri1 gri4 gri5";
+.thuvien{
+  padding: em(50) 0;
+  .thuvien-desc{
+    &.idx-desc{
+      @include bg("thuvien-bg.png",$background-position: bottom center);
+      padding-bottom: 20px;
+      margin: 0px auto 20px;
+    }
+  }
+  .thuvien-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-template-areas: "gri1 gri1 gri2 gri3" "gri1 gri1 gri4 gri5";
+    &>div{
+      margin-top: 10px;
+      a{
+        position: relative;
+        padding-top: percentage(276/290);
+        height: 100%;
+        @include grid(flex);
+        img{
+          @extend %img-fill;
+          object-fit: cover;
+          object-position: top center;
+        }
+        h5{
+          @include absolute($left: 0, $bottom: 0);
+          width: 100%;
+          margin-bottom: 0;
+          @include background-opacity(#000, 0.5);
+          @include setFont(14px, #fff, 400);
+          @include transition(all 0.3s ease);
+          padding: 10px;
+          opacity: 0;
+
+        }
+        @include on-event(){
+          h5{
+            opacity: 1;
+          }
+        };
+      }
+    }
+  }
+
+  .gri1 { grid-area: gri1; }
+
+  .gri2 { grid-area: gri2; }
+
+  .gri3 { grid-area: gri3; }
+
+  .gri4 { grid-area: gri4; }
+
+  .gri5 { grid-area: gri5; }
 }
-
-.gri1 { grid-area: gri1; }
-
-.gri2 { grid-area: gri2; }
-
-.gri3 { grid-area: gri3; }
-
-.gri4 { grid-area: gri4; }
-
-.gri5 { grid-area: gri5; }
 
 .gioithieu{
     @include bg("about.jpg", $background-size: cover);
@@ -90,17 +133,21 @@
 
 .visao{
     @include grid($display: flex, $justify-content: space-between);
+
   &>figure{
     @include grid($display: inline-flex);
     @include flex(1);
+    position: relative;
     margin-bottom: 0;
     img{
-        width: 100%;
+        @extend %img-fill;
+        object-fit: cover;
+        object-position: top center;
     }
   }
   .visao-box{
     width: 50%;
-    padding: em(40) em(40) 0;
+    padding: em(40) em(40);
     @include bg("visao-bg.jpg",$background-size: cover);
     .idx-tit{
         h4{
@@ -146,7 +193,7 @@
   }
 }
 .spnoibat{
-    padding: em(40) 0;
+    padding: em(40) 0 0;
   .nav{
     @include justify-content(center);
     margin: 10px 0 20px;
@@ -166,7 +213,12 @@
 }
 .nhuongquyen{
     padding: em(40) 0;
-  .subtitle{}
+  .subtitle{
+    @include setFont(em(28), #333, 300);
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 0;
+  }
   &-main{
     margin: 0 -#{em(14)};
     .nhuongquyen-item{
@@ -179,10 +231,24 @@
           }
         }
         .info{
-          strong{}
-          span{}
-          h5{}
-          p{}
+          position: relative;
+          padding-left: 70px;
+          strong{
+            @include setFont(em(58), #d21616, 400, $font-barlow-semi-condensed);
+            @include absolute($left: 0, $top: 0);
+            line-height: 1;
+          }
+          span{
+            @include setFont(20px, #333, 400);
+          }
+          h5{
+            @include setFont(20px, #009a19, 400);
+            @include line-clamp($font-size: 20px, $line-height: 1.5, $lines-to-show: 3, $max-height: true);
+          }
+          p{
+            @include setFont(14px, #333, 400);
+            @include line-clamp($font-size: 14px, $line-height: 1.5, $lines-to-show: 5, $max-height: true);
+          }
         }
       }
     }
@@ -191,7 +257,106 @@
 .quangcao{
   .quangcao-item{
     a{
-      img{}
+      display: block;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+.tin-video{
+  .title{
+    @include setFont(em(26), $theme-color, 700, $font-JosefinSans);
+    text-transform: uppercase;
+    line-height: 1;
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    &:before{
+      content: "";
+      @include box(3px, 25px);
+      @include absolute($left: 0, $top: -3px);
+      background-color: $theme-color;
+    }
+  }
+  &-flex{
+    @include grid(flex, $justify-content: space-between);
+  }
+  .video-bg{
+    width: 49%;
+  }
+  .tin-bg{
+   width: 49%; 
+  }
+  .tinnb-main{
+    .tinnb-item{
+
+      a{
+        @include grid(flex, $justify-content: space-between);
+        figure{
+          width: percentage(172/582);
+          margin-bottom: 0;
+          img{
+
+          }
+        }
+        .info{
+          margin-left: 15px;
+          @include flex(1);
+          h5{
+            @include setFont(14px, #333, 700);
+            margin-top: 10px;
+          }
+          .postdate{
+            @include setFont(13px, #858585);
+            span{
+
+            }
+          }
+          p{
+            @include setFont(13px, #333);
+            @include line-clamp($font-size: 13px, $line-height: 1.5, $lines-to-show: 2, $max-height: true);
+            margin-bottom: 0;
+          }
+        }
+      }
+      @include doubly(){
+        margin-top: 26px;
+      };
+    }
+  }
+}
+.themanh{
+  padding: 1.3em 0;
+  margin-top: 20px;
+  @include bg("themanh.png", $background-repeat: repeat-x, $background-position: top left);
+  &-main{
+    margin:  0 -1em;
+  }
+  &-item{
+    padding: 0 1em;
+    article{
+      @include grid(flex, $justify-content: space-between, $align-items: center);
+      figure{
+        @include box(70px, 70px);
+        @include grid(inline-flex, $justify-content: center, $align-items: center);
+        position: relative;
+        margin-bottom: 0;
+        img{
+        }
+      }
+      .info{
+        @include flex(1);
+        margin-left: 10px;
+        p{
+          @include setFont(13px, #333);
+          margin: 0;
+          strong{
+            
+          }
+        }
+      }
     }
   }
 }

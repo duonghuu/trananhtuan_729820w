@@ -7,7 +7,7 @@
           <div class="mxhft"><?= lay_mxh("mxhft") ?></div>
         </div>
         <div class="ft-info">
-          <p class="ft-tit text-uppercase"><?= _thongtinlienhe ?></p>
+          <p class="ft-tit text-uppercase"><span><?= _thongtinlienhe ?></span></p>
           <?php /* <h4 class="ft-company"><a href=""><?= $company["ten"] ?></a></h4> */?>
           <div class="content"> <?php echo lay_text('footer'); ?> </div>
         </div>
@@ -17,7 +17,8 @@
         </div>
         <div class="ft-video">
           <p class="ft-tit text-uppercase"><span>Video clip</span></p>
-          <a href=""><img src="images/video.jpg" alt="video"></a>
+          <a data-fancybox="" href="//www.youtube.com/watch?v=<?= getYoutubeIdFromUrl($video[0]["link"]) ?>">
+            <img src="images/video.jpg" alt="video"></a>
         </div>
         <?php /* <?php  if($deviceType != "phone"){ ?>
                 <div class="ft-fanpage">

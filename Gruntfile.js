@@ -58,8 +58,8 @@ module.exports = function(grunt) {
                 '<%= dirs.inputJS %>/magiczoomplus.js',
 
                 '<%= dirs.inputDevJS %>/my_script.js',
-                '<%= dirs.inputDevJS %>/home.js',
                 '<%= dirs.inputDevJS %>/common.js',
+                '<%= dirs.inputDevJS %>/home.js',
                 '<%= dirs.inputDevJS %>/valak_menu.js',
                 '<%= dirs.inputDevJS %>/timkiem.js',
                 // '<%= dirs.inputDevJS %>/newsletter.js',

@@ -128,6 +128,7 @@
     <div class="idx-tit">
       <h4><a href="thu-vien.html">Album ảnh</a></h4>
     </div>
+    <div class="idx-desc thuvien-desc"><?= $txtthuvien["mota"] ?></div>
     <div class="thuvien-grid">
       <?php foreach ($thuvien as $key => $value) {
         $img = _upload_tintuc_l.$value["thumb"];
@@ -135,7 +136,9 @@
         
       <div class="gri<?= $key+1 ?>">
         <a href="<?= get_url($value,"thu-vien") ?>">
-          <img src="<?= $img ?>" alt="<?= $value["ten"] ?>"></a>
+          <img src="<?= $img ?>" alt="<?= $value["ten"] ?>">
+          <h5><?= $value["ten"] ?></h5>
+        </a>
       </div>
      <?php } ?>
     </div>
@@ -143,6 +146,7 @@
 </div>
 
 <div class="tin-video">
+
   <div class="container">
     <div class="tin-video-flex">
       <div class="video-bg">
@@ -158,14 +162,15 @@
       <div class="tin-bg">
         <div class="title">Tin tức nổi bật</div>
         <div class="tinnb-main">
+
           <?php foreach ($tinnb as $key => $value) { 
 $img = _upload_tintuc_l.$value["thumb"];
             ?>
             <div class="tinnb-item"><a href="<?= get_url($value,"tin-tuc") ?>">
-                <figure><img src="images/1x1.png" data-lazy="<?= $img ?>" alt="<?= $value["ten"] ?>"></figure>
+                <figure><img src="<?= $img ?>" alt="<?= $value["ten"] ?>"></figure>
                 <div class="info">
                   <h5><?= $value["ten"] ?></h5>
-                  <div class="date"><span><?= date('d/m/Y',$value["ngaytao"]) ?></span></div>
+                  <div class="postdate"><span><?= date('d/m/Y',$value["ngaytao"]) ?></span></div>
                   <p><?= catchuoi($value["mota"],200) ?></p>
                 </div>
               </a></div>
@@ -176,6 +181,7 @@ $img = _upload_tintuc_l.$value["thumb"];
   </div>
 </div>
 <div class="themanh">
+
   <div class="container">
     <div class="themanh-main">
       <?php foreach ($themanh as $key => $value) { ?>

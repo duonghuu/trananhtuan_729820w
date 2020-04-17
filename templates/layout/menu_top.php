@@ -11,7 +11,7 @@
           onclick="if(this.value=='<?=_nhaptukhoatimkiem?>...'){this.value=''}" 
           onblur="if(this.value==''){this.value='<?=_nhaptukhoatimkiem?>...'}"> 
           <span onclick="onSearch($(this));return false;" class="btn_search">
-            <i class="fas fa-search"></i></span></div>
+            <i class="fas fa-search"></i></span>
           </div>
         </div>
     <?php /*

@@ -738,7 +738,7 @@ function utf8convert($str) {
     $str = preg_replace("/($uni)/i",$ascii,$str);
   return $str;
 }
-function changeTitle($text){
+function changeTitle($str){
  $str = stripUnicode($str);
  $str = mb_convert_case($str,MB_CASE_LOWER,'utf-8');
  $str = strtolower($str);
@@ -840,7 +840,7 @@ function thumb_bgratio($src_img, $new_w, $new_h){
 function create_thumb($file, $width, $height, $folder,$file_name,$zoom_crop='1',$dong='0'){
    $type = end(explode('.',$file_name));
    $name = basename($file_name, '.'.$type);
-   $name=changeTitleImage($name);
+   $name = changeTitleImage($name);
    $file_name = $name.'.'.$type;
    $new_w = $width;
    $new_h = $height;

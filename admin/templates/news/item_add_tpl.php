@@ -307,6 +307,16 @@ $ds_photo=$d->result_array();
               </div>
           <?php }?>
          <?php } ?>
+         <?php if(in_array('ten2',$config['type'])) { ?>
+             <div class="formRow">
+                 <label><?= (!empty($config["title"]["ten2"]))?$config["title"]["ten2"]:"Tiêu đề" ?>:</label>
+                 <div class="formRight">
+                     <input type="text" name="ten2<?=$key?>" title="Nhập nội dung" id="ten2<?=$key?>"
+                      class="tipS" value="<?=@$item['ten2'.$key]?>" />
+                 </div>
+                 <div class="clear"></div>
+             </div>
+         <?php }?>
          <?php if(in_array('chucvu',$config['type'])) { ?>
            <div class="formRow">
              <label><?= (!empty($config['title']['chucvu'])) ? $config['title']['chucvu'] : "Chức vụ" ?></label>

@@ -143,7 +143,7 @@ switch($type){
 		$config['type'] = array('ten','hinhanh','home');
 		@define ( _width_thumb , 70 );
 		@define ( _height_thumb , 70 );
-		@define ( _style_thumb , 2 );
+		@define ( _style_thumb , 1 );
 		@define ( _width_thumb2 , 70);
 		@define ( _height_thumb2 , 70 );
 		break;
@@ -168,7 +168,7 @@ switch($type){
 		$config['title'] = array('ten'=>"Tiêu đề lớn",'ten2'=>"Tiêu đề nhỏ");
 		@define ( _width_thumb , 400 );
 		@define ( _height_thumb , 300 );
-		@define ( _style_thumb , 2 );
+		@define ( _style_thumb , 1 );
 		@define ( _width_thumb2 , 400);
 		@define ( _height_thumb2 , 300 );
 		break;
@@ -198,6 +198,8 @@ switch($type){
 	}
 	break;
 	case 'tin-tuc':
+	case 'chuoi-quan':
+	case 'tuyen-dung':
 	case 'chinh-sach':
 	switch($act){
 		case 'danhmuc':
@@ -326,7 +328,7 @@ switch($type){
 		default:
 		@define ( _width_thumb , 100 );
 		@define ( _height_thumb , 100 );
-		@define ( _style_thumb , 2 );
+		@define ( _style_thumb , 1 );
 		@define ( _width_thumb2 , 250 );
 		@define ( _height_thumb2 , 250 );
 		break;
@@ -337,7 +339,7 @@ switch($type){
 		default:
 		@define ( _width_thumb , 660 );
 		@define ( _height_thumb , 120);
-		@define ( _style_thumb , 2 );
+		@define ( _style_thumb , 1 );
 		@define ( _width_thumb2 , 660 );
 		@define ( _height_thumb2 , 120 );
 		break;
@@ -359,7 +361,7 @@ switch($type){
 		default:
 		@define ( _width_thumb , 700 );
 		@define ( _height_thumb , 500 );
-		@define ( _style_thumb , 2 );
+		@define ( _style_thumb , 1 );
 		@define ( _width_thumb2 , 700 );
 		@define ( _height_thumb2 , 500 );
 		break;
@@ -457,13 +459,14 @@ switch($type){
 		$config['title'] = array('ten2'=>'Tiêu để nhỏ');
 		@define ( _width_thumb , 585 );
 		@define ( _height_thumb , 400 );
-		@define ( _style_thumb , 2 );
+		@define ( _style_thumb , 1 );
 		@define ( _width_thumb2 , 585 );
 		@define ( _height_thumb2 , 400 );
 		break;
 	}
 	break;
 	
+	case 'bang-gia':
 	case 'lienhe':
 	switch($act){
 		default:

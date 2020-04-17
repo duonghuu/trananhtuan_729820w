@@ -68,19 +68,19 @@ switch($com)
 	$template = isset($_GET['id']) ? "news_detail" : "news";
 	$type_og = isset($_GET['id']) ? "article" : "object";
 	break;
-	case 'dich-vu':
-	$type = "dich-vu";
-	$title = _dichvu;
-	$title_cat = _dichvu;
+	case 'tuyen-dung':
+	$type = "tuyen-dung";
+	$title = _tuyendung;
+	$title_cat = _tuyendung;
 	$title_other = _tinlienquan;
 	$source = "news";
 	$template = isset($_GET['id']) ? "news_detail" : "news";
 	$type_og = isset($_GET['id']) ? "article" : "object";
 	break;
-	case 'gia-si':
-	$type = "gia-si";
-	$title = "Giá sỉ";
-	$title_cat = "Giá sỉ";
+	case 'nhuong-quyen':
+	$type = "nhuong-quyen";
+	$title = "Nhượng quyền";
+	$title_cat = "Nhượng quyền";
 	$title_other = _tinlienquan;
 	$source = "news";
 	$template = isset($_GET['id']) ? "news_detail" : "news";
@@ -104,10 +104,10 @@ switch($com)
 	$template = isset($_GET['id']) ? "news_detail" : "news";
 	$type_og = isset($_GET['id']) ? "article" : "object";
 	break;
-	case 'ho-tro':
-	$type = "ho-tro";
-	$title = "Hỗ trợ";
-	$title_cat = "Hỗ trợ";
+	case 'chuoi-quan':
+	$type = "chuoi-quan";
+	$title = "Chuỗi quán";
+	$title_cat = "Chuỗi quán";
 	$title_other = _tinlienquan;
 	$source = "news";
 	$template = isset($_GET['id']) ? "news_detail" : "news";
@@ -131,26 +131,15 @@ switch($com)
 	$template = "about";
 	$type_og = "article";
 	break;
-	
-	case 'chinh-sach-bo-si':
-	$type = "chinh-sach-bo-si";
-	$title = 'Chính sách bỏ sỉ';
-	$title_cat = 'Chính sách bỏ sỉ';
+	case 'bang-gia':
+	$type = "bang-gia";
+	$title = _banggia;
+	$title_cat = _banggia;
 	$title_other = _tinlienquan;
 	$source = "about";
 	$template = "about";
 	$type_og = "article";
 	break;
-	case 'so-sanh-cac-cho-si':
-	$type = "so-sanh-cac-cho-si";
-	$title = "So sánh với các chợ sỉ";
-	$title_cat = "So sánh với các chợ sỉ";
-	$title_other = _tinlienquan;
-	$source = "about";
-	$template = "about";
-	$type_og = "article";
-	break;
-	
 	case 'tim-kiem':
 	$type = "san-pham";
 	$title = _ketquatimkiem;
@@ -159,15 +148,6 @@ switch($com)
 	$template = "product";
 	break;
 	case 'san-pham':
-	$type = "san-pham";
-	$title = _sanpham;
-	$title_cat = _sanpham;
-	$title_other = _sanphamkhac;
-	$source = "product";
-	$template = isset($_GET['id']) ? "product_detail" : "product";
-	$type_og = isset($_GET['id']) ? "article" : "object";
-	break;
-	case 'hang-moi':
 	$type = "san-pham";
 	$title = _sanpham;
 	$title_cat = _sanpham;
@@ -212,13 +192,6 @@ switch($com)
 	$title_cat = _giohang;
 	$source = "giohang";
 	$template = "giohang";
-	break;
-	case 'gio-hang2':
-	$type = "giohang";
-	$title = _giohang;
-	$title_cat = _giohang;
-	$source = "giohang2";
-	$template = "giohang2";
 	break;
 	case 'checkouts':
 	$type = "thanhtoan";

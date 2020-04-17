@@ -257,11 +257,11 @@ function copy_item(){
 //Save sản phẩm
 function save_item(){
     global $d,$config,$urlcu;
-    $file_name=$_FILES['file']['name'];
-    $file2_name=$_FILES['file2']['name'];
+    $file_name = $_FILES['file']['name'];
+    $file2_name = $_FILES['file2']['name'];
     if(empty($_POST)) transfer("Không nhận được dữ liệu", "index.php?com=product&act=man".$urlcu);
     $id = isset($_POST['id']) ? themdau($_POST['id']) : "";
-    $data=process_quote($_POST['data']);
+    $data = process_quote($_POST['data']);
     $data['id_danhmuc'] = (int)$_POST['id_danhmuc'];
     $data['id_list'] = (int)$_POST['id_list'];
     $data['id_cat'] = (int)$_POST['id_cat'];
@@ -278,7 +278,7 @@ function save_item(){
     if($_POST['tenkhongdau']=='') {
         $data['tenkhongdau'] = changeTitle($data['ten']);
     }else{
-        $data['tenkhongdau']=changeTitle($_POST['tenkhongdau']);
+        $data['tenkhongdau'] = changeTitle($_POST['tenkhongdau']);
     }
     $data['masp'] = $_POST['masp'];
     $data['gia'] = str_replace(',','',$_POST['gia']);

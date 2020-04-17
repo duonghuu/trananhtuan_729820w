@@ -301,11 +301,11 @@ function lay_slider($type,$class='',$width=0,$height=0,$zc=2){
 		// $cls_moi = ($v["spmoi"]>0)?'<i class="new">new</i>':"";
 		// $cls_banchay = ($v["spbanchay"]>0)?'<i class="sale"></i>':"";
 		$giasp = ($v["giakm"]>0)?$v["giakm"]:$v["gia"];
-		$gia = ($giasp>0)?num_format($giasp).' vnđ':_lienhe;
+		$gia = ($giasp>0)?num_format($giasp).'đ':_lienhe;
 		$s_gia = "";
 		if($v["giakm"]>0) {
-			$s_gia .= '<span>'.num_format($v["giakm"]).' vnđ</span>';
-			$s_gia .= '<del>'.num_format($v["gia"]).' vnđ</del>';
+			$s_gia .= '<span>'.num_format($v["giakm"]).'đ</span>';
+			$s_gia .= '<del>'.num_format($v["gia"]).'đ</del>';
 		}else{
 			$s_gia .= '<span>'.$gia.'</span>';
 		}

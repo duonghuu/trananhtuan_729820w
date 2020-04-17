@@ -210,8 +210,6 @@ if($id>0)
 	$page--;
 	$bg = $pageSize*$page;
 
-	// $product = get_result("select *,mota$lang as mota,id,ten$lang as ten,tenkhongdau FROM #_product where $where 
-	// 	limit $bg,$pageSize");
 	$product = get_result("select *,mota$lang as mota,id,ten$lang as ten,tenkhongdau FROM #_product where $where 
-	");
+		limit $bg,$pageSize");
 	$url_link = getCurrentPageURL();
