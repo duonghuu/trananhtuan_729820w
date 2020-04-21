@@ -198,7 +198,7 @@ switch($type){
 	}
 	break;
 	case 'tin-tuc':
-	case 'chuoi-quan':
+	
 	case 'tuyen-dung':
 	case 'chinh-sach':
 	switch($act){
@@ -238,10 +238,11 @@ switch($type){
 	}
 	break;
 	case 'diachi':
+	case 'chuoi-quan':
 	switch($act){
 		default:
-		$config['type'] = array('ten','mota');
-		$config['title'] = array('mota'=>"Địa chỉ");
+		$config['type'] = array('ten','mota','chucvu','link');
+		$config['title'] = array('mota'=>"Iframe google",'link'=>"Hotline",'chucvu'=>"Địa chỉ");
 		break;
 	}
 	break;

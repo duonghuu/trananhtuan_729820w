@@ -166,7 +166,7 @@ function get_main_category()
       echo'&id_danhmuc='. $_REQUEST['id_danhmuc'];?>'" />
       <input type="button" class="blueB" value="Xoá Chọn" id="xoahet" />
       <?php if(in_array('home',$config['type'])) { ?>
-        <input type="button" class="blueB" value="Thông tin" 
+        <input type="button" class="redB" value="Thông tin" 
         onclick="location.href='index.php?com=about&act=capnhat<?php if($_REQUEST['type']!='') 
         echo'&type=txt'. $_REQUEST['type'];?>'" />
         <?php } ?>

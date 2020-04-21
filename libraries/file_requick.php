@@ -110,7 +110,7 @@ switch($com)
 	$title_cat = "Chuỗi quán";
 	$title_other = _tinlienquan;
 	$source = "news";
-	$template = isset($_GET['id']) ? "news_detail" : "news";
+	$template = isset($_GET['id']) ? "news_detail" : "hethong";
 	$type_og = isset($_GET['id']) ? "article" : "object";
 	break;
 	case 'thu-vien':

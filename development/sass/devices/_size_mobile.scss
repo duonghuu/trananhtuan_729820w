@@ -15,7 +15,6 @@
                       }
                   }
           };
-
           /*========= HOME ===============*/
           @include setGioiThieu_SM;
           @include setViSao_SM{
@@ -53,6 +52,29 @@
                                 @include flex(unset);
                         }
                 }
+        }
+        .spnoibat{
+          .nav{
+            @include justify-content(space-between);
+            &-item{
+              width: 49%;
+              margin-bottom: 5px;
+              .nav-link{
+                text-align: center;
+                color: #fff;
+                background-color: $theme-color;
+                &.active{
+                  background-color: #fff;
+                  color: $theme-color;
+                }
+              }
+            }
+          }
+        } 
+        .thuvien {
+          .gri5{
+            display: none;
+          }
         }
           // @include setSpnoibatSmall;
           // @include setThemanhSmall;

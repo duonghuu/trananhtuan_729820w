@@ -1,6 +1,6 @@
       <?php 
       if($source != "index1"){
-        $slider = get_result("select ten$lang as ten,photo,thumb from #_slider 
+        $slider = get_result("select ten$lang as ten,mota$lang as mota,photo,thumb from #_slider 
           where hienthi=1 and type='slider' order by stt");
          ?>
          <div id="slideshow">
@@ -8,14 +8,29 @@
              <?php 
              foreach ($slider as $key => $v) {
               ?>
-              <div class="slideshow-slider-item">
+              <div class="slideshow-slider-item ">
                <section>
-                <a href="<?= $v["link"] ?>" class="slider-link"><picture>
+                <a href="<?= $v["link"] ?>" class="slider-link <?= $deviceType ?>" 
+                  style="<?= ($deviceType=="phone")? 'background-image: url('._upload_hinhanh_l.$v["thumb"].')' :'' ?>" >
+<?php if($deviceType!="phone"){ ?>
+                  <picture>
                   <source media="(min-width: 1024px)" srcset="<?= _upload_hinhanh_l.$v["thumb"] ?>" />
                     <source media="(min-width: 550px)" srcset="thumb/768x382/1/<?= _upload_hinhanh_l.$v["thumb"] ?>" />
                       <img src="thumb/425x212/1/<?= _upload_hinhanh_l.$v["thumb"] ?>" 
-                      alt="<?= $v["ten"] ?>" />
-                    </picture></a>
+                      alt="<?= $v["ten"] ?>" /> 
+                  
+                    </picture>
+                  <?php } ?>
+                  </a>
+                    <div class="slider-text-bg">
+                      <div class="slider-text">
+                        <div class="slider-text__ten"><?= $v["ten"] ?></div>
+                        <div class="slider-text__welcome <?= $deviceType ?>">
+                          <img src="<?= _upload_hinhanh_l.$logolang["photo"] ?>" alt="logo">
+                        </div>
+                        <div class="slider-text__mota"><?= $v["mota"] ?></div>
+                      </div>
+                    </div>
                   </section>
                 </div>
               <?php } ?>

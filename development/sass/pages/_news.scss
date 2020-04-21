@@ -1,4 +1,27 @@
+%hethong-css{
+    @include grid(flex, $justify-content: space-between, $flex-wrap: wrap);
+        .hethong-item{
+            width: 49%;
+            background-color: #eee;
+            padding: 5px;
+            border: 1px solid #d6d4d4;
+            margin-bottom: 20px;
+            div{
+                @include setFont(14px, #333, 400, $font-text);
+                margin-bottom: 5px;
+                i{
+                    margin-right: 7px;
+                }
 
+            }
+            .hethong-iframe{
+                margin-bottom: 0; 
+                iframe{
+                    @include box(100%, 250px);
+                }
+            }
+        }
+}
 %news-tpl-grid-verticle{
     .news-tpl-item{
         @include boxShadow(0px 0px 10px #f3f3f3);
@@ -64,6 +87,9 @@
             }
         }
     }
+}
+.hethong{
+    @extend %hethong-css;
 }
 .news-tpl-grid{
     @include grid($display: flex, $flex-wrap: wrap, $gutter: 2%);

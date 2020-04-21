@@ -14,7 +14,7 @@ $a_danhmuc = array();
 		$d->query($sql_lanxem);
 
 		$row_detail = get_fetch("select *,ten$lang as ten,mota$lang as mota,noidung$lang as noidung FROM #_news where hienthi=1 and id='$id' limit 0,1");
-		if(empty($row_detail)){redirect($config_url_ssl.'/404.php');}
+		if(empty($row_detail)){redirect($config_url_ssl.'/404.html');}
 
 		$a_danhmuc["id_danhmuc"] = $row_detail["id_danhmuc"];
 		$a_danhmuc["id_list"] = $row_detail["id_list"];
@@ -127,7 +127,8 @@ $a_danhmuc = array();
 	$page--;
 	$bg = $pageSize*$page;
 
-	$tintuc = get_result("select id,ten$lang as ten,tenkhongdau,type,thumb,photo,thumb2,photo2,mota$lang as mota,ngaytao,luotxem,taptin,link,noibat FROM #_news where $where limit $bg,$pageSize");
+	$tintuc = get_result("select id,ten$lang as ten,tenkhongdau,type,thumb,photo,thumb2,photo2,
+		mota$lang as mota,ngaytao,luotxem,taptin,link,noibat,chucvu FROM #_news where $where limit $bg,$pageSize");
 	$url_link = getCurrentPageURL();
 	if(!empty($_POST["rp2val"])){
 	    if($_SESSION['rp2token'] == $_POST['rp2token']){ // refresh page

@@ -796,6 +796,19 @@ div.wap_item {
 .slider-flex{
     @include boxstyle($display: flex, $justify-content: space-between);
 }
+@-webkit-keyframes fadeInUpSD {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
 #slideshow {
     position:relative;
     overflow:hidden;
@@ -803,68 +816,84 @@ div.wap_item {
     .slideshow-slider-main{
         @include clearfix;
         .slideshow-slider-item {
+            &.slick-active{
+                & > section {
+                    .slider-text-bg{
+                        .slider-text{
+                            animation-name: fadeInUpSD;
+                            animation-duration: 1s; 
+                            opacity: 1;
+                        }
+                    }
+                }
+            };
             & > section {
                 @extend %slider-item-1;
                 .slider-link{
                     display: block;
+                    img {
+                        width: 100%;
+                    }
+                    &.phone{
+                        height: 450px;
+                        background-size: cover;
+                        background-position: top center;
+                        background-repeat: no-repeat;
+                    }
                 }
-                img {
-                    width: 100%;
-                }
-                // .slider-text-bg{
-                //     @include flexbox;
-                //     @include align-items(center);
-                //     @include justify-content(flex-end);
-                //     @include box(100%,  100%);
-                //     position: absolute;
-                //     top: 0;
-                //     left: 0;
-                //     .slider-text{
-                //         color: #fff;
-                //         width: 100%;
-                //         max-width: 470px;
-                //         margin-right: 11.5%;
-                //         &__welcome{
-                //             @include setFont(15px, #fff);
-                //             margin-bottom: 0;
-                //         }
-                //         &__ten{
-                //             @include setFont(60px, #fff, 400, $font-UTMHelvetIns);
-                //             text-transform: uppercase;
-                //             margin-bottom: 0;
-                //         }
-                //         &__ngaytao{
-                //             @include setFont(15px, #bec4c6, 500);
-                //              margin: 10px 0;
-                //         }
-                //         &__mota{
-                //             @include line-clamp($font-size: 17px, $line-height: 1.5, $lines-to-show: 3, $max-height: true);
-                //             margin-bottom: 20px;
-                           
-                //         }
-                //         &__button{
-                //             &.slider-button{
-                //                 @include flex;
-                //                 @include justify-content(flex-start);
-                //                 a{
-                //                     @include setFont(15px, #000, 700); 
-                //                     @include box(150px, 45px);
-                //                     @include inline-flex;
-                //                     @include align-items(center);
-                //                     @include justify-content(center);
-                //                     background: #fff;
-                //                     margin-right: 4px;
-                //                     text-transform: capitalize;
-                //                 }
-                //                 .slider-button__xemthem{
-                //                     background: url($images-url+"btn-bg.png");
-                //                     color: #fff;
-                //                 }
-                //             }
+                .slider-text-bg{
+                    @include flexbox;
+                    @include align-items(center);
+                    @include justify-content(center);
+                    @include box(100%,  100%);
+                    @include absolute($top: 0, $left: 0);
+                    .slider-text{
+                        width: 100%;
+                        max-width: 600px;
+                        margin: 0 auto;
+                        text-align: center;
+                        &__welcome{
+                            img{
+
+                            }
+                        }
+                        &__ten{
+                            @include setFont(18px, #fff, 400, $font-barlow-semi-condensed);
+                            text-transform: uppercase;
+                            margin-bottom: 0;
+                        }
+                        &__ngaytao{
+                            @include setFont(15px, #bec4c6, 500);
+                             margin: 10px 0;
+                        }
+                        &__mota{
+                            @include line-clamp($font-size: 16px, $line-height: 1.5, $lines-to-show: 2, $max-height: true);
+                            @include setFont(16px, #fff, 400, $font-barlow-semi-condensed);
+                            margin-bottom: 0;
+                        }
+                        &__button{
+                            &.slider-button{
+                                @include flex;
+                                @include justify-content(flex-start);
+                                a{
+                                    @include setFont(15px, #000, 700); 
+                                    @include box(150px, 45px);
+                                    @include inline-flex;
+                                    @include align-items(center);
+                                    @include justify-content(center);
+                                    background: #fff;
+                                    margin-right: 4px;
+                                    text-transform: capitalize;
+                                }
+                                .slider-button__xemthem{
+                                    background: url($images-url+"btn-bg.png");
+                                    color: #fff;
+                                }
+                            }
                             
-                //         }
-                //     }
-                // }
+                        }
+                    }
+                }
             }
 
         }

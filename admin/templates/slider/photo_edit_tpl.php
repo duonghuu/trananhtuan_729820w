@@ -97,7 +97,7 @@
         </div>
         <div class="clear"></div>
       </div>
-      <div class="formRow none">
+      <div class="formRow">
         <label>Mô tả:</label>
         <div class="formRight">
           <textarea rows="8" cols="" title="Viết mô tả ngắn bài viết" class="tipS" name="mota<?=$key?>" id="mota<?=$key?>"><?=@$item['mota'.$key]?></textarea>
