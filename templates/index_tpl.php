@@ -180,6 +180,32 @@ $img = _upload_tintuc_l.$value["thumb"];
     </div>
   </div>
 </div>
+<div class="nhansanxuat">
+  <div class="container">
+    <div class="nhansanxuat-flex">
+      <div class="web-slider-main">
+        <?php 
+        foreach ($ha_nhansanxuat as $key => $value) {
+          $img = _upload_hinhthem_l.$value["thumb"];
+          echo '<div class="nhansanxuat-item">
+          <a href="nhan-san-xuat.html">
+                  <img src="'.$img.'" alt="'.$nhansanxuat["ten"].'"></a>
+          </div>';
+        } ?>
+      </div>
+      <?php /* 
+      <a href="nhan-san-xuat.html" class="imgsp">
+              <img src="<?= _upload_hinhanh_l.$nhansanxuat["thumb"] ?>" alt="<?= $nhansanxuat["ten"] ?>"></a> 
+      */?>
+      <div class="info">
+        <h3><a href="nhan-san-xuat.html"><?= $nhansanxuat["ten"] ?></a></h3>
+        <div class="desc"><?= $nhansanxuat["mota"] ?></div>
+        <a href="nhan-san-xuat.html" class="xem">Xem thêm</a>
+      </div>
+    </div>
+  </div>
+</div>
+<?php /* 
 <div class="themanh">
 
   <div class="container">
@@ -199,4 +225,5 @@ $img = _upload_tintuc_l.$value["thumb"];
       <?php } ?>
     </div>
   </div>
-</div>
+</div> 
+*/?>

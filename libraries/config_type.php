@@ -319,6 +319,7 @@ switch($type){
 	case 'logo':
 	switch($act){
 		default:
+		$config['type'] = array('ten');
 		@define ( _width_thumb2 , 110 );
 		@define ( _height_thumb2 , 110 );
 		break;
@@ -462,6 +463,20 @@ switch($type){
 		@define ( _height_thumb , 400 );
 		@define ( _style_thumb , 1 );
 		@define ( _width_thumb2 , 585 );
+		@define ( _height_thumb2 , 400 );
+		break;
+	}
+	break;
+
+	case 'nhan-san-xuat':
+	switch($act){
+		default:
+		$config['type'] = array('seo','noidung','ten','mota','hinhthem');
+		$config['title'] = array('ten2'=>'Tiêu để nhỏ');
+		@define ( _width_thumb , 600 );
+		@define ( _height_thumb , 400 );
+		@define ( _style_thumb , 1 );
+		@define ( _width_thumb2 , 600 );
 		@define ( _height_thumb2 , 400 );
 		break;
 	}

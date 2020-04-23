@@ -131,13 +131,22 @@ switch($com)
 	$template = "about";
 	$type_og = "article";
 	break;
-	case 'bang-gia':
-	$type = "bang-gia";
-	$title = _banggia;
-	$title_cat = _banggia;
+	case 'nhan-san-xuat':
+	$type = "nhan-san-xuat";
+	$title = "Nhận sản xuất cafe theo yêu cầu";
+	$title_cat = "Nhận sản xuất cafe theo yêu cầu";
 	$title_other = _tinlienquan;
 	$source = "about";
 	$template = "about";
+	$type_og = "article";
+	break;
+	case 'bang-gia':
+	$type = "san-pham";
+	$title = _banggia;
+	$title_cat = _banggia;
+	$title_other = _tinlienquan;
+	$source = "product";
+	$template = "banggia";
 	$type_og = "article";
 	break;
 	case 'tim-kiem':

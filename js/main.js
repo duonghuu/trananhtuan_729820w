@@ -6062,6 +6062,9 @@ function loadData(page,id_tab,loai){
   });
 }
 $(document).ready(function() {
+  $('#example').DataTable({
+        "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
+    });
   $( "a.scrollLink" ).click(function( event ) {
         event.preventDefault();
         $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top - 100 }, 500);
@@ -6096,7 +6099,7 @@ $(document).ready(function() {
       accessibility:false,
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay:false,
+      autoplay:true,
       autoplaySpeed:3000,
       speed:1000,
       arrows:true,

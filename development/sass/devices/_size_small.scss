@@ -5,8 +5,11 @@
   @include setHeaderCenter;
   @include showMobileMenu;
   @include setIdxTitleSize;
-
+  .hd-bg {
+      display: none;
+  }
   /*========= HOME ===============*/
+  @include setNhanSanXuat_SM;
   @include setGioiThieu_SM;
   @include setViSao_SM;
   $product-gutter: percentage(30/1330);

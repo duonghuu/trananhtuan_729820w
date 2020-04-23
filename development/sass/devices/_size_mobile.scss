@@ -6,7 +6,11 @@
                         @include justify-content(center);
                   }
           }
+          body .hd-bg {
+              display: none;
+          }
         };
+
           @include showMobileMenu;
           @include setIdxTitleSize{
                 .idx-tit {
@@ -17,6 +21,7 @@
           };
           /*========= HOME ===============*/
           @include setGioiThieu_SM;
+          @include setNhanSanXuat_SM;
           @include setViSao_SM{
                 .visao .visao-box ul li h4{
                       @include font-size(16);  
@@ -63,6 +68,7 @@
                 text-align: center;
                 color: #fff;
                 background-color: $theme-color;
+                @include font-size(13);
                 &.active{
                   background-color: #fff;
                   color: $theme-color;

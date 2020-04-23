@@ -23,14 +23,20 @@ if($source=="index"){
     $tinnb=get_result("select mota$lang as mota,ten$lang as ten,tenkhongdau,id,thumb,photo
         ,type,ngaytao,luotxem from #_news where type='tin-tuc' and noibat>0 and hienthi>0 order by stt asc");
     $c_tinnb=count($tinnb);
+    $nhansanxuat=get_fetch("select id,ten$lang as ten,mota$lang as mota,thumb,photo from #_about 
+        where type='nhan-san-xuat' ");
+    if(!empty($nhansanxuat)){
+        $ha_nhansanxuat=get_result("select id,thumb,photo from #_hinhanh where type='nhan-san-xuat' 
+             order by stt asc");
+    }
 }
 $dichvu=get_result("select mota$lang as mota,ten$lang as ten,tenkhongdau,id,thumb,photo
     ,type,ngaytao,luotxem from #_news where type='dich-vu' and hienthi>0 order by stt asc");
 $danhmuc_cap1 = get_result("select ten$lang as ten,tenkhongdau,id,type from
  #_product_danhmuc where type='san-pham' and hienthi>0 order by stt asc");
-$themanh=get_result("select mota$lang as mota,ten$lang as ten,tenkhongdau,id,thumb,photo
-    ,type,ngaytao,luotxem from #_news where type='the-manh' and hienthi>0 order by stt asc");
-$logolang = get_fetch("select photo as photo from #_background where type='logo'");
+// $themanh=get_result("select mota$lang as mota,ten$lang as ten,tenkhongdau,id,thumb,photo
+//     ,type,ngaytao,luotxem from #_news where type='the-manh' and hienthi>0 order by stt asc");
+$logolang = get_fetch("select ten$lang as ten , photo as photo from #_background where type='logo'");
 // $bannerlang = get_fetch("select photo as photo from #_background where type='banner'");
 // $ftlogo=get_fetch("select photo from #_about where type='footer' ");
 // $bgbnlang = get_fetch("select photo as photo from #_background where type='bgbn'");

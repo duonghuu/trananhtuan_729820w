@@ -38,6 +38,7 @@
   var lang_danhgiaroi = '<?=_danhgiaroi?>';
   var lang_tencty = '<?=$company["ten"]?>';
 </script>
+  <script src="DataTables/datatables.js" ></script>
   <script src="js/main.js" ></script>
   <script src="//www.google.com/recaptcha/api.js?render=<?=$config['recaptcha_sitekey']?>"></script>
   <script>

@@ -4,9 +4,12 @@
     @include setHeaderCenter;
       @include showMobileMenu;
       @include setIdxTitleSize;
-
+      .hd-bg {
+          display: none;
+      }
       /*========= HOME ===============*/
       @include setGioiThieu_SM;
+      @include setNhanSanXuat_SM;
       @include setViSao_SM;
       $product-gutter: percentage(30/1330);
       @include setProductColumnMobile($p_col: 6, $p_gutter: $product-gutter);

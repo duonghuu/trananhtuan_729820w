@@ -15,7 +15,7 @@
     <div class="container">
       <div class="hd-bot-flex">
         <a href="" class="logo" ><img src="<?= _upload_hinhanh_l.$logolang["photo"] ?>" alt="logo"></a>
-        <a href="" class="hd-name"><?= $company["ten"] ?></a>
+        <a href="" class="hd-name"><?= $logolang["ten"] ?></a>
         <?php include _template."layout/menu_top.php"; ?>
       </div>
     </div>

@@ -360,3 +360,35 @@
     }
   }
 }
+.nhansanxuat{
+  padding: em(40) 0;
+  &-flex{
+    @include boxstyle(flex, $justify-content: space-between);
+    .web-slider-main{
+      width: 49%;
+      .nhansanxuat-item{
+        a{
+          display: block;
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+    .info{
+      width: 49%;
+      h3{
+        @include setFont(em(22), #000, 400, $font-text);
+        a{
+          color: #000;
+        }
+      }
+      .desc{
+        margin-bottom: 10px;
+      }
+      .xem{
+        @extend %btn-chitiet;
+      }
+    }
+  }
+}

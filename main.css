@@ -189,13 +189,13 @@
   list-style-type: none;
   margin-bottom: 0; }
 
-form#frm_dknt, .slider-flex, .main-nav, .main-nav > ul, .main-nav > ul > li, .main-nav > ul > li > a, .hd-top-flex, .hd-bot-flex, #footer .ft-flex, #footer .ft-flex .ft-baiviet ul li a, #footer .copyright .ft-wrap, #footer .copyright .ft-wrap ul.ft-thongke, #footer .copyright .ft-wrap ul.ft-thongke li, #search .my-search, .news-tpl-grid .news-tpl-item a, .pr-box article .info p, div.wap_pro {
+form#frm_dknt, .slider-flex, .main-nav, .main-nav > ul, .main-nav > ul > li, .main-nav > ul > li > a, .hd-top-flex, .hd-bot-flex, #footer .ft-flex, #footer .ft-flex .ft-baiviet ul li a, #footer .copyright .ft-wrap, #footer .copyright .ft-wrap ul.ft-thongke, #footer .copyright .ft-wrap ul.ft-thongke li, #search .my-search, .nhansanxuat-flex, .news-tpl-grid .news-tpl-item a, .pr-box article .info p, div.wap_pro {
   display: flex; }
 
-form#frm_dknt #submit_nhantin, .mxh, .mxh a, .btn-idx {
+form#frm_dknt #submit_nhantin, .mxh, .mxh a, .btn-idx, .nhansanxuat-flex .info .xem {
   display: inline-flex; }
 
-.slider-flex, .main-nav, .main-nav > ul, .main-nav > ul > li, .hd-top-flex, .hd-bot-flex, #footer .ft-flex, #footer .copyright .ft-wrap, #search .my-search, .news-tpl-grid .news-tpl-item a, div.wap_pro {
+.slider-flex, .main-nav, .main-nav > ul, .main-nav > ul > li, .hd-top-flex, .hd-bot-flex, #footer .ft-flex, #footer .copyright .ft-wrap, #search .my-search, .nhansanxuat-flex, .news-tpl-grid .news-tpl-item a, div.wap_pro {
   justify-content: space-between; }
 
 form#frm_dknt #submit_nhantin, .main-nav > ul > li > a, .mxh a, .pr-box article .info p {
@@ -9596,7 +9596,7 @@ div.wap_item {
     #slideshow .slideshow-slider-main .slideshow-slider-item > section .slider-link img {
       width: 100%; }
     #slideshow .slideshow-slider-main .slideshow-slider-item > section .slider-link.phone {
-      height: 450px;
+      height: 500px;
       background-size: cover;
       background-position: top center;
       background-repeat: no-repeat; }
@@ -10204,14 +10204,14 @@ span.total {
 #video-idx {
   margin-bottom: 10px; }
 
-.btn-idx {
+.btn-idx, .nhansanxuat-flex .info .xem {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background-color: #207a00;
-  border: 1px solid #207a00;
+  background-color: #5a280e;
+  border: 1px solid #5a280e;
   padding: 0 1.0625em;
   position: relative;
   line-height: 33px;
@@ -10219,7 +10219,7 @@ span.total {
   color: #fff;
   font-size: 14px;
   font-weight: 700; }
-  .btn-idx:hover {
+  .btn-idx:hover, .nhansanxuat-flex .info .xem:hover {
     color: #ff0; }
 
 .idx-tit {
@@ -10556,7 +10556,8 @@ span.total {
       margin-bottom: 0; }
 
 .tin-video .tinnb-main .tinnb-item + .tinnb-item {
-  margin-top: 26px; }
+  margin-top: 26px;
+  }
 
 .themanh {
   padding: 1.3em 0;
@@ -10594,6 +10595,26 @@ span.total {
           color: #333;
           font-size: 13px;
           margin: 0; }
+
+.nhansanxuat {
+  padding: 2.5em 0; }
+  .nhansanxuat-flex .web-slider-main {
+    width: 49%; }
+    .nhansanxuat-flex .web-slider-main .nhansanxuat-item a {
+      display: block; }
+      .nhansanxuat-flex .web-slider-main .nhansanxuat-item a img {
+        width: 100%; }
+  .nhansanxuat-flex .info {
+    width: 49%; }
+    .nhansanxuat-flex .info h3 {
+      color: #000;
+      font-size: 1.375em;
+      font-weight: 400;
+      font-family: "Roboto", sans-serif; }
+      .nhansanxuat-flex .info h3 a {
+        color: #000; }
+    .nhansanxuat-flex .info .desc {
+      margin-bottom: 10px; }
 
 .giohang_fix {
   margin-left: 10px;
@@ -11835,7 +11856,16 @@ background: #fff;
   .idx-tit h4 {
     font-size: 36px;
     font-size: 2.25rem; }
+  .hd-bg {
+    display: none; }
   /*========= HOME ===============*/
+  .nhansanxuat-flex {
+    display: block; }
+    .nhansanxuat-flex .web-slider-main {
+      width: 100%;
+      margin-bottom: 1em; }
+    .nhansanxuat-flex .info {
+      width: 100%; }
   .gioithieu__title p {
     font-size: 30px;
     font-size: 1.875rem; }
@@ -11846,7 +11876,8 @@ background: #fff;
     display: block; }
     .visao > figure {
       width: 100%;
-      padding-top: 50%; }
+      padding-top: 50%;
+      display: none; }
     .visao .visao-box {
       width: 100%;
       padding: 1.875em 1.25em; }
@@ -11915,6 +11946,8 @@ background: #fff;
   .idx-tit h4 {
     font-size: 36px;
     font-size: 2.25rem; }
+  .hd-bg {
+    display: none; }
   /*========= HOME ===============*/
   .gioithieu__title p {
     font-size: 30px;
@@ -11922,11 +11955,19 @@ background: #fff;
   .gioithieu__title h2 {
     font-size: 36px;
     font-size: 2.25rem; }
+  .nhansanxuat-flex {
+    display: block; }
+    .nhansanxuat-flex .web-slider-main {
+      width: 100%;
+      margin-bottom: 1em; }
+    .nhansanxuat-flex .info {
+      width: 100%; }
   .visao {
     display: block; }
     .visao > figure {
       width: 100%;
-      padding-top: 50%; }
+      padding-top: 50%;
+      display: none; }
     .visao .visao-box {
       width: 100%;
       padding: 1.875em 1.25em; }
@@ -11988,6 +12029,8 @@ background: #fff;
     -webkit-justify-content: center;
     -moz-justify-content: center;
     justify-content: center; }
+  body .hd-bg {
+    display: none; }
   .nav-bg {
     display: none; }
   #valak_mmenu {
@@ -12012,11 +12055,19 @@ background: #fff;
   .gioithieu__title h2 {
     font-size: 36px;
     font-size: 2.25rem; }
+  .nhansanxuat-flex {
+    display: block; }
+    .nhansanxuat-flex .web-slider-main {
+      width: 100%;
+      margin-bottom: 1em; }
+    .nhansanxuat-flex .info {
+      width: 100%; }
   .visao {
     display: block; }
     .visao > figure {
       width: 100%;
-      padding-top: 50%; }
+      padding-top: 50%;
+      display: none; }
     .visao .visao-box {
       width: 100%;
       padding: 1.875em 1.25em; }
@@ -12092,7 +12143,9 @@ background: #fff;
       .spnoibat .nav-item .nav-link {
         text-align: center;
         color: #fff;
-        background-color: #5a280e; }
+        background-color: #5a280e;
+        font-size: 13px;
+        font-size: 0.8125rem; }
         .spnoibat .nav-item .nav-link.active {
           background-color: #fff;
           color: #5a280e; }

@@ -31,7 +31,7 @@
             <ul class="sub">
                 <?php phanquyen_menu('Vì sao chọn chúng tôi','news','man','vi-sao'); ?>
                 <?php phanquyen_menu('Nhượng quyền','news','man','nhuong-quyen'); ?>
-                <?php phanquyen_menu('Thế mạnh','news','man','the-manh'); ?>
+                <?php //phanquyen_menu('Thế mạnh','news','man','the-manh'); ?>
                 <?php phanquyen_menu('Tin tức','news','man','tin-tuc'); ?>
                 <?php phanquyen_menu('Tuyển dụng','news','man','tuyen-dung'); ?>
                 <?php phanquyen_menu('Chuỗi quán','news','man','chuoi-quan'); ?>
@@ -45,7 +45,8 @@
             <span>Trang tĩnh</span><strong></strong></a>
             <ul class="sub">
                 <?php phanquyen_menu('Giới thiệu','about','capnhat','gioi-thieu'); ?>
-                <?php phanquyen_menu('Bảng giá','about','capnhat','bang-gia'); ?>
+                <?php phanquyen_menu('Nhận sản xuất cafe theo yêu cầu','about','capnhat','nhan-san-xuat'); ?>
+                <?php //phanquyen_menu('Bảng giá','about','capnhat','bang-gia'); ?>
                 <?php phanquyen_menu('Cập nhật liên hệ','about','capnhat','lienhe'); ?>
                 <?php phanquyen_menu('Cập nhật footer','about','capnhat','footer'); ?>
             </ul>

@@ -5,6 +5,6 @@
             showProduct($v);
     } ?>
 </div>
-<?php /* <div class="pagination"><?=pagesListLimitadmin($url_link , $totalRows , $pageSize, $offset)?></div> */?>
+<div class="pagination"><?=pagesListLimitadmin($url_link , $totalRows , $pageSize, $offset)?></div>
 </div>
 

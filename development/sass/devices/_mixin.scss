@@ -27,6 +27,21 @@
     } 
     @content;
   }
+
+  @mixin setNhanSanXuat_SM{
+    .nhansanxuat{
+      &-flex{
+        display: block;
+        .web-slider-main{
+          width: 100%;
+          margin-bottom: 1em;
+        }
+        .info{
+          width: 100%;
+        }
+      }
+    }
+  }
   @mixin setViSao_SM{
     .visao{
       display: block;
@@ -34,6 +49,7 @@
       &>figure{
         width: 100%;
         padding-top: 50%;
+        display: none;
       }
       .visao-box{
         width: 100%;

@@ -28,3 +28,4 @@
 <?php if($config['reponsive']==true) { ?>
   <?php /* <link rel="stylesheet" href="css/mobile.css"> */?>
 <?php } ?>
+<link rel="stylesheet" media="screen" href="DataTables/datatables.css">

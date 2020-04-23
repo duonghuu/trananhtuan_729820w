@@ -29,6 +29,16 @@
 
 		<?php foreach ($config['lang'] as $key => $value) {?>
         <div id="content_lang_<?=$key?>" class="tab_content">	
+            <?php if(in_array('ten',$config['type'])) { ?>
+             <div class="formRow">
+               <label>Tên</label>
+               <div class="formRight">
+                 <input type="text" name="ten<?=$key?>" title="Nhập tên" id="ten<?=$key?>" 
+                 class="tipS" value="<?=@$item['ten'.$key]?>" />
+               </div>
+               <div class="clear"></div>
+             </div>
+            <?php } ?>
              <div class="formRow">           
                 <label>Hình ảnh hiện tại: </label>      
                 <div class="formRight">          

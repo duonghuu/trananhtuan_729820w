@@ -59,6 +59,11 @@ function save_gioithieu(){
 			}
 		}		
 	}
+	foreach ($config['lang'] as $key => $value) {
+		$data['ten'.$key] = magic_quote($_POST['ten'.$key]);
+		$data['mota'.$key] = magic_quote($_POST['mota'.$key]);
+		$data['noidung'.$key] = magic_quote($_POST['noidung'.$key]);			
+	}
 	$data['link'] = $_POST['link'];
 	$data['tenkhongdau'] = changeTitle($_POST['ten']);
 	$data['title'] = $_POST['title'];
@@ -67,11 +72,6 @@ function save_gioithieu(){
 	$data['hienthi'] = isset($_POST['hienthi']) ? 1 : 0;
 	$data['ngaysua'] = time();
 	
-	foreach ($config['lang'] as $key => $value) {
-		$data['ten'.$key] = $_POST['ten'.$key];
-		$data['mota'.$key] = magic_quote($_POST['mota'.$key]);
-		$data['noidung'.$key] = magic_quote($_POST['noidung'.$key]);			
-	}
 	if($_POST['type']=='dong')
 		del_cache();
 	$d->reset();
