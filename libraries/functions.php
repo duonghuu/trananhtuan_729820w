@@ -821,13 +821,6 @@ function thumb_simple($src_img, $new_w, $new_h){
   });
   return $src_img;
 }
-function thumb_ratio($src_img, $new_w, $new_h){
-  $src_img->resize($new_w, $new_h, function ($constraint) {
-    $constraint->aspectRatio();
-    $constraint->upsize();
-  });
-  return $src_img;
-}
 function thumb_bgratio($src_img, $new_w, $new_h){
   $src_img->resize($new_w, $new_h, function ($constraint) {
     $constraint->aspectRatio();
@@ -836,6 +829,13 @@ function thumb_bgratio($src_img, $new_w, $new_h){
   $img_thumb = Image::canvas($new_w, $new_h, 'rgba(255,255,255,1)');
   $img_thumb->insert($src_img, 'center');
   return $img_thumb;
+}
+function thumb_ratio($src_img, $new_w, $new_h){
+  $src_img->resize($new_w, $new_h, function ($constraint) {
+    $constraint->aspectRatio();
+    $constraint->upsize();
+  });
+  return $src_img;
 }
 function create_thumb($file, $width, $height, $folder,$file_name,$zoom_crop='1',$dong='0'){
    $type = end(explode('.',$file_name));

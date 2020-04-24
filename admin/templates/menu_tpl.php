@@ -76,6 +76,7 @@
     <?php //phanquyen_menu('Background liên hệ','background','capnhat','bgft'); ?>
     <?php //phanquyen_menu('Cập nhật banner mobile','background','capnhat','banner_mobi'); ?>
     <?php phanquyen_menu('Quản lý slider','slider','man_photo','slider'); ?>
+    <?php phanquyen_menu('Quản lý slider mobile','slider','man_photo','slidermb'); ?>
     <?php //phanquyen_menu('Banner trang trong','news','man','bntrong'); ?>
     <?php //phanquyen_menu('Text Đối tác','about','capnhat','txtdoitac'); ?>
     <?php //phanquyen_menu('Đối tác','slider','man_photo','doi-tac'); ?>

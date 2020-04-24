@@ -405,10 +405,10 @@ switch($type){
 	switch($act){
 		default:
 		@define ( _width_thumb , 768 );
-		@define ( _height_thumb , 300);
+		@define ( _height_thumb , 900);
 		@define ( _style_thumb , 1 );
 		@define ( _width_thumb2 , 768 );
-		@define ( _height_thumb2 , 300);
+		@define ( _height_thumb2 , 900);
 		break;
 	}
 	break;

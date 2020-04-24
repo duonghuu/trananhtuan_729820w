@@ -162,9 +162,8 @@
       <div class="tin-bg">
         <div class="title">Tin tức nổi bật</div>
         <div class="tinnb-main">
-
           <?php foreach ($tinnb as $key => $value) { 
-$img = _upload_tintuc_l.$value["thumb"];
+            $img = _upload_tintuc_l.$value["thumb"];
             ?>
             <div class="tinnb-item"><a href="<?= get_url($value,"tin-tuc") ?>">
                 <figure><img src="<?= $img ?>" alt="<?= $value["ten"] ?>"></figure>

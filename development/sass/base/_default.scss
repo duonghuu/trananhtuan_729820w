@@ -17,7 +17,10 @@
 .content table {
     width: 100%;
 }
-
+.contact-flex {
+    @include boxstyle($display: flex, $flex-wrap: wrap, $justify-content: space-between, 
+      $align-items: null);
+}
 .tt_lh {
     width: 49%;
 }

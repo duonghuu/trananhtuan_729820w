@@ -290,8 +290,9 @@
    width: 49%; 
   }
   .tinnb-main{
+    @include clearfix;
     .tinnb-item{
-
+      margin-bottom: 26px;
       a{
         @include grid(flex, $justify-content: space-between);
         figure{
@@ -322,7 +323,7 @@
         }
       }
       @include doubly(){
-        margin-top: 26px;
+        // margin-top: 26px;
       };
     }
   }

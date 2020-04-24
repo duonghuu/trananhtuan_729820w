@@ -1,7 +1,8 @@
       <?php 
       if($source != "index1"){
+        $myt = ($deviceType!="phone") ? 'slider' : 'slidermb';
         $slider = get_result("select ten$lang as ten,mota$lang as mota,photo,thumb from #_slider 
-          where hienthi=1 and type='slider' order by stt");
+          where hienthi=1 and type='".$myt."' order by stt");
          ?>
          <div id="slideshow">
            <div class="slideshow-slider-main">
