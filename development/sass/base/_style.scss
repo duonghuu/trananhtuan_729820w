@@ -835,7 +835,7 @@ div.wap_item {
                 }
                 .slider-text-bg{
                     @include flexbox;
-                    @include align-items(center);
+                    @include align-items(flex-start);
                     @include justify-content(center);
                     @include box(100%,  100%);
                     @include absolute($top: 0, $left: 0);
@@ -850,9 +850,10 @@ div.wap_item {
                             }
                         }
                         &__ten{
-                            @include setFont(18px, #fff, 400, $font-barlow-semi-condensed);
+                            @include setFont(22px, #fff, 400, $font-barlow-semi-condensed);
                             text-transform: uppercase;
-                            margin-bottom: 0;
+                            margin-bottom: 10px;
+                                margin-top: 170px;
                         }
                         &__ngaytao{
                             @include setFont(15px, #bec4c6, 500);
@@ -860,7 +861,7 @@ div.wap_item {
                         }
                         &__mota{
                             @include line-clamp($font-size: 16px, $line-height: 1.5, $lines-to-show: 2, $max-height: true);
-                            @include setFont(16px, #fff, 400, $font-barlow-semi-condensed);
+                            @include setFont(16px, #048D45, 700, $font-barlow-semi-condensed);
                             margin-bottom: 0;
                         }
                         &__button{
