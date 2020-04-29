@@ -23,7 +23,7 @@ if($source=="index"){
     $tinnb=get_result("select mota$lang as mota,ten$lang as ten,tenkhongdau,id,thumb,photo
         ,type,ngaytao,luotxem from #_news where type='tin-tuc' and noibat>0 and hienthi>0 order by stt asc");
     $c_tinnb=count($tinnb);
-    $nhansanxuat=get_fetch("select id,ten$lang as ten,mota$lang as mota,thumb,photo from #_about 
+    $nhansanxuat=get_fetch("select id,ten$lang as ten,mota2$lang as mota,thumb,photo from #_about 
         where type='nhan-san-xuat' ");
     if(!empty($nhansanxuat)){
         $ha_nhansanxuat=get_result("select id,thumb,photo from #_hinhanh where type='nhan-san-xuat' 

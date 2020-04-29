@@ -471,8 +471,9 @@ switch($type){
 	case 'nhan-san-xuat':
 	switch($act){
 		default:
-		$config['type'] = array('seo','noidung','ten','mota','hinhthem');
+		$config['type'] = array('seo','noidung','ten','mota2','hinhthem');
 		$config['title'] = array('ten2'=>'Tiêu để nhỏ');
+		$config['ck'] = array('mota2');
 		@define ( _width_thumb , 600 );
 		@define ( _height_thumb , 400 );
 		@define ( _style_thumb , 1 );

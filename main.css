@@ -9617,9 +9617,11 @@ div.wap_item {
       max-width: 600px;
       margin: 0 auto;
       text-align: center; }
+      #slideshow .slideshow-slider-main .slideshow-slider-item > section .slider-text-bg .slider-text__welcome img {
+        height: 110px; }
       #slideshow .slideshow-slider-main .slideshow-slider-item > section .slider-text-bg .slider-text__ten {
         color: #fff;
-        font-size: 22px;
+        font-size: 24px;
         font-weight: 400;
         font-family: "Barlow Semi Condensed", sans-serif;
         text-transform: uppercase;
@@ -9631,18 +9633,18 @@ div.wap_item {
         font-weight: 500;
         margin: 10px 0; }
       #slideshow .slideshow-slider-main .slideshow-slider-item > section .slider-text-bg .slider-text__mota {
+        color: #048D45;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: "Barlow Semi Condensed", sans-serif;
         display: block;
         display: -webkit-box;
-        max-height: 48px;
+        max-height: 60px;
         line-height: 1.5;
         overflow: hidden;
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
-        color: #048D45;
-        font-size: 16px;
-        font-weight: 700;
-        font-family: "Barlow Semi Condensed", sans-serif;
         margin-bottom: 0; }
       #slideshow .slideshow-slider-main .slideshow-slider-item > section .slider-text-bg .slider-text__button.slider-button {
         -webkit-box-flex: 1;
@@ -11923,7 +11925,9 @@ background: #fff;
     .contact-flex .bando {
       width: 100%; }
       .contact-flex .bando iframe {
-        height: 300px; } }
+        height: 300px; }
+  #slideshow .slideshow-slider-main .slideshow-slider-item > section .slider-text-bg .slider-text__ten {
+    margin-top: 100px; } }
 
 /*  ================================================================================
   EXTRA SMALL
@@ -12199,6 +12203,8 @@ background: #fff;
     .contact-flex .bando {
       width: 100%; }
       .contact-flex .bando iframe {
-        height: 300px; } }
+        height: 300px; }
+  #slideshow .slideshow-slider-main .slideshow-slider-item > section .slider-text-bg .slider-text__ten {
+    margin-top: 100px; } }
 
 /*# sourceMappingURL=main.css.map */

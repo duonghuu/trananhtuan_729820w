@@ -61,7 +61,7 @@ $config['lang']=array(''=>'Tiếng Việt');
 
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 $config['reponsive'] = true;
-$config['company'] = array("tt_zalo"=>"Zalo","tt_messenger"=>"Messenger");
+$config['company'] = array("tt_zalo"=>"Zalo","tt_messenger"=>"Messenger","tt_link"=>"Link google map");
 $config['salt_sta'] = '@nina';
 $config['salt_end'] = '@#FDI5IZ59^';
 

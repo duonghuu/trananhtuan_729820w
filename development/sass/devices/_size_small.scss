@@ -29,6 +29,8 @@
   @include setCopyrightCenter;
   @include setLienHe_SM;
   // @include setProductMobile;
-  
+  #slideshow .slideshow-slider-main .slideshow-slider-item > section .slider-text-bg .slider-text__ten{
+        margin-top: 100px;
+  }
   
 }

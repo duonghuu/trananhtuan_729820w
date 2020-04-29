@@ -846,11 +846,11 @@ div.wap_item {
                         text-align: center;
                         &__welcome{
                             img{
-
+                                height: 110px;
                             }
                         }
                         &__ten{
-                            @include setFont(22px, #fff, 400, $font-barlow-semi-condensed);
+                            @include setFont(24px, #fff, 400, $font-barlow-semi-condensed);
                             text-transform: uppercase;
                             margin-bottom: 10px;
                                 margin-top: 170px;
@@ -860,8 +860,8 @@ div.wap_item {
                              margin: 10px 0;
                         }
                         &__mota{
-                            @include line-clamp($font-size: 16px, $line-height: 1.5, $lines-to-show: 2, $max-height: true);
-                            @include setFont(16px, #048D45, 700, $font-barlow-semi-condensed);
+                            @include setFont(20px, #048D45, 700, $font-barlow-semi-condensed);
+                            @include line-clamp($font-size: 20px, $line-height: 1.5, $lines-to-show: 2, $max-height: true);
                             margin-bottom: 0;
                         }
                         &__button{

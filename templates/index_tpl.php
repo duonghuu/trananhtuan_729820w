@@ -2,7 +2,7 @@
   <div class="container">
     <div class="gioithieu__title">
       <p><?= $gioithieu["ten2"] ?></p>
-      <h2><a href="gioi-thieu.html"><?= $gioithieu["ten"] ?></a></h2>
+      <h2><a href="gioi-thieu.html">KIÊN<sup>+</sup>COFFEE</a></h2>
     </div>
     <div class="gioithieu__text">
       <?= $gioithieu["mota"] ?>
@@ -16,7 +16,7 @@
     <div class="idx-tit">
       <h4><span><?= $txtvisao["ten"] ?></span></h4>
     </div>
-    <p class="title-desc"><?= $txtvisao["mota"] ?></p>
+    <p class="title-desc">KIÊN<sup>+</sup>COFFEE là đơn vị cung cấp sản phẩm uy tín hàng đầu.</p>
     <ul>
       <?php foreach ($visao as $key => $value) {
         $img = _upload_tintuc_l.$value["thumb"];
@@ -89,7 +89,7 @@
 <div class="nhuongquyen">
   <div class="container">
     <div class="idx-tit">
-      <h4><span><?= $txtnhuongquyen["ten"] ?></span></h4>
+      <h4><span>KIÊN<sup>+</sup>COFFEE</span></h4>
     </div>
     <p class="subtitle"><?= $txtnhuongquyen["ten2"] ?></p>
     <div class="idx-desc"><?= $txtnhuongquyen["mota"] ?></div>
