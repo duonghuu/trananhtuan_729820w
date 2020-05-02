@@ -22,8 +22,9 @@
         $img = _upload_tintuc_l.$value["thumb"];
       ?>
       <li>
-        <figure><img src="<?= $img ?>" alt="<?= $value["ten"] ?>"></figure>
-        <h4><?= $value["ten"] ?></h4>
+        <a href="<?= get_url($value,'vi-sao') ?>">
+          <figure><img src="<?= $img ?>" alt="<?= $value["ten"] ?>"></figure>
+        <h4><?= $value["ten"] ?></h4></a>
       </li>
     <?php } ?>
     </ul>
@@ -88,8 +89,8 @@
 
 <div class="nhuongquyen">
   <div class="container">
-    <div class="idx-tit">
-      <h4><span>KIÊN<sup>+</sup>COFFEE</span></h4>
+    <div class="text-center nhuongquyen-title">
+      <img src="<?= _upload_hinhanh_l.$txtnhuongquyen["photo"] ?>" alt="title">
     </div>
     <p class="subtitle"><?= $txtnhuongquyen["ten2"] ?></p>
     <div class="idx-desc"><?= $txtnhuongquyen["mota"] ?></div>

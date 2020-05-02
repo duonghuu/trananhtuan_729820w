@@ -140,7 +140,7 @@ switch($type){
 	case 'vi-sao':
 	switch($act){
 		default:
-		$config['type'] = array('ten','hinhanh','home');
+		$config['type'] = array('ten','hinhanh','home','noidung');
 		@define ( _width_thumb , 70 );
 		@define ( _height_thumb , 70 );
 		@define ( _style_thumb , 1 );
@@ -177,8 +177,13 @@ switch($type){
 	case 'txtnhuong-quyen':
 	switch($act){
 		default:
-		$config['type'] = array('ten','ten2','mota');
+		$config['type'] = array('ten','ten2','mota','hinhanh');
 		$config['title'] = array('ten'=>"Tiêu đề lớn",'ten2'=>"Tiêu đề nhỏ");
+		@define ( _width_thumb , 282 );
+		@define ( _height_thumb , 40 );
+		@define ( _style_thumb , 3 );
+		@define ( _width_thumb2 , 282);
+		@define ( _height_thumb2 , 40 );
 		break;
 	}
 	break;
@@ -241,8 +246,13 @@ switch($type){
 	case 'chuoi-quan':
 	switch($act){
 		default:
-		$config['type'] = array('ten','mota','chucvu','link');
+		$config['type'] = array('ten','mota','chucvu','link','hinhanh');
 		$config['title'] = array('mota'=>"Iframe google",'link'=>"Hotline",'chucvu'=>"Địa chỉ");
+		@define ( _width_thumb , 570 );
+		@define ( _height_thumb , 250 );
+		@define ( _style_thumb , 2 );
+		@define ( _width_thumb2 , 570 );
+		@define ( _height_thumb2 , 250 );
 		break;
 	}
 	break;
@@ -494,7 +504,12 @@ switch($type){
 	case 'footer':
 	switch($act){
 		default:
-		$config['type'] = array('noidung');
+		$config['type'] = array('noidung','hinhanh');
+		@define ( _width_thumb , 110 );
+		@define ( _height_thumb , 110 );
+		@define ( _style_thumb , 1 );
+		@define ( _width_thumb2 , 110 );
+		@define ( _height_thumb2 , 110 );
 		break;
 	}
 	break;

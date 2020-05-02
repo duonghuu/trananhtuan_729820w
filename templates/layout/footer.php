@@ -3,7 +3,7 @@
     <div class="container">
       <div class="ft-flex">
         <div class="ft-social">
-          <a href="" class="ft-logo"><img src="<?= _upload_hinhanh_l.$logolang["photo"] ?>" alt="logo"></a>
+          <a href="" class="ft-logo"><img src="<?= _upload_hinhanh_l.$ftlogo["photo"] ?>" alt="logo"></a>
           <div class="mxhft"><?= lay_mxh("mxhft") ?></div>
         </div>
         <div class="ft-info">

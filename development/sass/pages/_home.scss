@@ -14,7 +14,7 @@
     &>a{
     }
     h4 {
-        @include setFont(em(36), $theme-color, 700, $font-JosefinSans);
+        @include setFont(40px, $theme-color, 700, $font-JosefinSans);
         text-transform: uppercase;
         text-align: center;
         margin: 0;
@@ -114,7 +114,7 @@
         line-height: 1;
     }
     h2{
-        @include setFont(em(40), $theme-color, 700, $font-JosefinSans);
+        @include setFont(40px, $theme-color, 700, $font-JosefinSans);
         text-transform: uppercase;
         line-height: 1;
       a{
@@ -151,6 +151,7 @@
     @include bg("visao-bg.jpg",$background-size: cover);
     .idx-tit{
         h4{
+          
             span{
                 color: #fff;
             }
@@ -166,24 +167,27 @@
     ul{
         @extend %reset-list;
       li{
-        @include grid(flex,$justify-content: space-between, $align-items: center);
-        position: relative;
-        min-height: 82px;
-        figure{
-            @include box(71px, 82px);
-            @include absolute($left: -75px);
-            @include bg("visao.png", $background-size: cover);
-            @include grid(inline-flex,$justify-content: center, $align-items: center);
-            margin-bottom: 0;
-          img{
-            max-width: 70%;
+        a{
+          @include grid(flex,$justify-content: space-between, $align-items: center);
+          position: relative;
+          min-height: 82px;
+          
+          figure{
+              @include box(71px, 82px);
+              @include absolute($left: -75px);
+              @include bg("visao.png", $background-size: cover);
+              @include grid(inline-flex,$justify-content: center, $align-items: center);
+              margin-bottom: 0;
+            img{
+              max-width: 70%;
+            }
           }
-        }
-        h4{
-            @include setFont(20px, #fff, 300);
-            @include flex(1);
-            text-transform: uppercase;
-            margin-left: 20px;
+          h4{
+              @include setFont(20px, #fff, 300);
+              @include flex(1);
+              text-transform: uppercase;
+              margin-left: 20px;
+          }
         }
         @include doubly(){
             margin-top: 20px;
@@ -218,6 +222,7 @@
     text-align: center;
     line-height: 1;
     margin-bottom: 0;
+    margin-top: 10px;
   }
   &-main{
     margin: 0 -#{em(14)};

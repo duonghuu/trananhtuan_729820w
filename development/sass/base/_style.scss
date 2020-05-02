@@ -846,14 +846,17 @@ div.wap_item {
                         text-align: center;
                         &__welcome{
                             img{
-                                height: 110px;
+                                // height: 110px;
                             }
                         }
                         &__ten{
-                            @include setFont(24px, #fff, 400, $font-barlow-semi-condensed);
+                            @include setFont(24px, #048D45, 400, $font-barlow-semi-condensed);
                             text-transform: uppercase;
                             margin-bottom: 10px;
                                 margin-top: 170px;
+                                @include media('<=425px'){
+                                    font-size: 20px;
+                                };
                         }
                         &__ngaytao{
                             @include setFont(15px, #bec4c6, 500);
